@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- CABECERAS DE SEGURIDAD -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <title>Planes y Suscripciones | GMC Licitaciones</title>
+  <meta name="description" content="Planes de suscripción accesibles diseñados para micro y pequeñas empresas proveedoras del Estado en el Perú.">
+
+  <!-- TAILWIND CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- TIPOGRAFÍA FORMAL -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono-num { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-700 selection:text-white">
+
+  <!-- BARRA SUPERIOR INSTITUCIONAL -->
+  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-6 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2.5">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Alineado a las normativas de la nueva <strong>Ley de Contrataciones del Estado N.° 32069</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span>🇵🇪 Lima, Perú</span>
+        <span>•</span>
+        <a href="contacto.html" class="hover:text-white transition">Atención a Proveedores</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-11 w-11 rounded-xl bg-blue-700 flex items-center justify-center font-black text-white text-xl shadow-md shadow-blue-700/20">
+          G
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-slate-950 block leading-tight">GMC <span class="text-blue-700">Licitaciones</span></span>
+          <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">Inteligencia Estratégica en Compras Públicas</span>
+        </div>
+      </a>
+
+      <!-- MENÚ MULTIPÁGINA -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-blue-700 transition">Inicio</a>
+        <a href="como-funciona.html" class="hover:text-blue-700 transition">Cómo funciona</a>
+        <a href="sectores.html" class="hover:text-blue-700 transition">Sectores</a>
+        <a href="planes.html" class="text-blue-700 border-b-2 border-blue-700 pb-1">Planes</a>
+        <a href="contacto.html" class="hover:text-blue-700 transition">Contacto</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contacto.html" class="bg-blue-700 hover:bg-blue-800 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition shadow-md shadow-blue-700/20">
+          Solicitar Demostración
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CABECERA -->
+  <section class="py-16 md:py-20 bg-white border-b border-slate-200 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3.5 py-1 rounded-full border border-blue-200">
+        Suscripciones Flexibles
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-950 tracking-tight leading-tight mt-4 mb-4">
+        Planes diseñados a la medida de tu empresa
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto mb-8">
+        Sin contratos forzosos. Escoge la modalidad que mejor se adapte a tu volumen de postulación en el SEACE.
+      </p>
+
+      <!-- INTERRUPTOR DINÁMICO (MENSUAL / ANUAL CON JS) -->
+      <div class="inline-flex items-center bg-slate-100 p-1.5 rounded-2xl border border-slate-200">
+        <button onclick="setModalidad('mensual')" id="btnModalidadMensual" class="px-5 py-2 rounded-xl text-xs font-bold bg-white text-slate-900 shadow-sm transition">
+          Pago Mensual
+        </button>
+        <button onclick="setModalidad('anual')" id="btnModalidadAnual" class="px-5 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5">
+          <span>Pago Anual</span>
+          <span class="bg-emerald-100 text-emerald-800 text-[10px] px-2 py-0.5 rounded-full font-bold">Ahorra 20%</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARJETAS DE PLANES DE PRECIOS -->
+  <section class="py-20 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-stretch">
+      
+      <!-- PLAN 1: PILOTO / INICIAL -->
+      <div class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between hover:shadow-lg transition">
+        <div>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2">Para Comenzar</span>
+          <h3 class="text-2xl font-bold text-slate-950 mb-1">Piloto Gratuito</h3>
+          <p class="text-xs text-slate-500 mb-6">Ideal para microempresas que recién exploran licitar con el Estado.</p>
+
+          <div class="mb-6">
+            <span class="text-4xl font-extrabold text-slate-950 font-mono-num">S/ 0</span>
+            <span class="text-xs text-slate-500 font-medium">/ 14 días de prueba</span>
+          </div>
+
+          <ul class="space-y-3 text-xs text-slate-700 mb-8 border-t border-slate-100 pt-6">
+            <li class="flex items-center gap-2">✓ Alertas de hasta 5 convocatorias por semana</li>
+            <li class="flex items-center gap-2">✓ 1 usuario administrador</li>
+            <li class="flex items-center gap-2">✓ Filtro por 1 solo rubro del RNP</li>
+            <li class="flex items-center gap-2">✓ Resumen básico de Términos de Referencia</li>
+            <li class="flex items-center gap-2 text-slate-400">✗ Sin alertas por WhatsApp</li>
+            <li class="flex items-center gap-2 text-slate-400">✗ Sin checklist de postulación</li>
+          </ul>
+        </div>
+
+        <a href="contacto.html" class="w-full text-center block bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 rounded-xl text-xs transition">
+          Iniciar prueba gratis
+        </a>
+      </div>
+
+      <!-- PLAN 2: MYPE PRO (DESTACADO) -->
+      <div class="bg-white rounded-3xl border-2 border-blue-700 p-8 shadow-xl flex flex-col justify-between relative hover:shadow-2xl transition">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-700 text-white text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+          Más Recomendado para MYPEs
+        </div>
+
+        <div>
+          <span class="text-xs font-bold text-blue-700 uppercase tracking-wider block mb-2">Crecimiento Activo</span>
+          <h3 class="text-2xl font-bold text-slate-950 mb-1">MYPE Pro</h3>
+          <p class="text-xs text-slate-500 mb-6">Para empresas que postulan periódicamente y no pueden perder convocatorias.</p>
+
+          <div class="mb-6">
+            <span id="precioMype" class="text-4xl font-extrabold text-blue-700 font-mono-num">S/ 149</span>
+            <span id="periodoMype" class="text-xs text-slate-500 font-medium">/ mes</span>
+          </div>
+
+          <ul class="space-y-3 text-xs text-slate-700 mb-8 border-t border-slate-100 pt-6">
+            <li class="flex items-center gap-2 font-semibold">✓ Convocatorias ilimitadas monitoreadas en vivo</li>
+            <li class="flex items-center gap-2 font-semibold">✓ Hasta 3 usuarios para tu equipo comercial</li>
+            <li class="flex items-center gap-2">✓ Cobertura en Bienes, Servicios y Consultoría</li>
+            <li class="flex items-center gap-2">✓ Síntesis completa de TDRs y bases de 80+ páginas</li>
+            <li class="flex items-center gap-2">✓ Checklist automático de documentos obligatorios</li>
+            <li class="flex items-center gap-2">✓ Alertas prioritarias a tu correo electrónico</li>
+          </ul>
+        </div>
+
+        <a href="contacto.html" class="w-full text-center block bg-blue-700 hover:bg-blue-800 text-white font-bold py-3.5 rounded-xl text-xs transition shadow-lg shadow-blue-700/25">
+          Elegir Plan MYPE Pro
+        </a>
+      </div>
+
+      <!-- PLAN 3: CORPORATIVO / LICITADOR ACTIVO -->
+      <div class="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between hover:shadow-lg transition">
+        <div>
+          <span class="text-xs font-bold text-slate-500 uppercase tracking-wider block mb-2">Empresas Consolidadas</span>
+          <h3 class="text-2xl font-bold text-slate-950 mb-1">Corporativo</h3>
+          <p class="text-xs text-slate-500 mb-6">Para empresas con alta frecuencia de postulación y equipos comerciales amplios.</p>
+
+          <div class="mb-6">
+            <span id="precioCorp" class="text-4xl font-extrabold text-slate-950 font-mono-num">S/ 389</span>
+            <span id="periodoCorp" class="text-xs text-slate-500 font-medium">/ mes</span>
+          </div>
+
+          <ul class="space-y-3 text-xs text-slate-700 mb-8 border-t border-slate-100 pt-6">
+            <li class="flex items-center gap-2 font-semibold">✓ Todo lo incluido en el Plan MYPE Pro</li>
+            <li class="flex items-center gap-2">✓ Usuarios ilimitados para tu empresa</li>
+            <li class="flex items-center gap-2">✓ Alertas inmediatas vía WhatsApp y correo</li>
+            <li class="flex items-center gap-2">✓ Auditoría previa de expedientes técnicos</li>
+            <li class="flex items-center gap-2">✓ Monitoreo de adjudicaciones de competidores</li>
+            <li class="flex items-center gap-2">✓ Asesor comercial dedicado en Lima</li>
+          </ul>
+        </div>
+
+        <a href="contacto.html" class="w-full text-center block bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl text-xs transition shadow-md">
+          Consultar Plan Corporativo
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BANNER FINAL DIRECTO A CONTACTO -->
+  <section class="py-20 px-6 bg-slate-900 text-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+        ¿Tienes dudas sobre qué plan se adapta a tu negocio?
+      </h2>
+      <p class="text-slate-400 text-base max-w-xl mx-auto mb-8 leading-relaxed">
+        Escríbenos para evaluar tu volumen de contratación y sugerirte la opción más rentable para tu empresa.
+      </p>
+      <a href="contacto.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">
+        <span>Hablar con un asesor comercial</span>
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500">
+      <div>
+        <span class="font-bold text-slate-900 text-sm">GMC Licitaciones</span> • Lima, Perú.
+        <p class="mt-1">Plataforma de Inteligencia en Contrataciones del Estado © 2026.</p>
+      </div>
+      <div class="flex gap-6 font-semibold">
+        <a href="index.html" class="hover:text-blue-700 transition">Inicio</a>
+        <a href="como-funciona.html" class="hover:text-blue-700 transition">Cómo funciona</a>
+        <a href="sectores.html" class="hover:text-blue-700 transition">Sectores</a>
+        <a href="planes.html" class="text-blue-700">Planes</a>
+        <a href="contacto.html" class="hover:text-blue-700 transition">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT DEL INTERRUPTOR DE PRECIOS -->
+  <script>
+    function setModalidad(tipo) {
+      const btnMensual = document.getElementById('btnModalidadMensual');
+      const btnAnual = document.getElementById('btnModalidadAnual');
+      const precioMype = document.getElementById('precioMype');
+      const periodoMype = document.getElementById('periodoMype');
+      const precioCorp = document.getElementById('precioCorp');
+      const periodoCorp = document.getElementById('periodoCorp');
+
+      if (tipo === 'anual') {
+        btnAnual.className = "px-5 py-2 rounded-xl text-xs font-bold bg-white text-slate-900 shadow-sm transition flex items-center gap-1.5";
+        btnMensual.className = "px-5 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition";
+        
+        precioMype.innerText = "S/ 119";
+        periodoMype.innerText = "/ mes (facturado anual)";
+        
+        precioCorp.innerText = "S/ 310";
+        periodoCorp.innerText = "/ mes (facturado anual)";
+      } else {
+        btnMensual.className = "px-5 py-2 rounded-xl text-xs font-bold bg-white text-slate-900 shadow-sm transition";
+        btnAnual.className = "px-5 py-2 rounded-xl text-xs font-bold text-slate-600 hover:text-slate-900 transition flex items-center gap-1.5";
+        
+        precioMype.innerText = "S/ 149";
+        periodoMype.innerText = "/ mes";
+        
+        precioCorp.innerText = "S/ 389";
+        periodoCorp.innerText = "/ mes";
+      }
+    }
+  </script>
+</body>
+</html>
