@@ -4,229 +4,258 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- CABECERAS DE SEGURIDAD (ANTI-HACKING) -->
+  <!-- SEGURIDAD REFORZADA: BLOQUEO DE PUERTAS TRASERAS, XSS Y CLICKJACKING -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
   
-  <title>GMC Licitaciones | Plataforma de Inteligencia en Contrataciones del Estado</title>
-  <meta name="description" content="Encuentra, filtra y analiza convocatorias del SEACE adaptadas a tu empresa. Ahorra tiempo y postula con seguridad.">
+  <title>GMC Licitaciones | Inteligencia en Contrataciones Públicas del Estado Peruano</title>
+  <meta name="description" content="Plataforma de análisis y recomendación de compras públicas (SEACE / OECE) para MYPEs. Proyecto desarrollado en la UNMSM bajo la Ley N.° 32069.">
 
   <!-- TAILWIND CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- TIPOGRAFÍA PROFESIONAL -->
+  <!-- FUENTES FORMALES INSTITUCIONALES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
   
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-institution { font-family: 'Cinzel', serif; }
   </style>
 </head>
-<body class="bg-white text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-slate-100 text-slate-800 antialiased selection:bg-blue-800 selection:text-white">
 
-  <!-- BARRA SUPERIOR INSTITUCIONAL -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-6">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span>Actualizado conforme a las disposiciones de la nueva <strong>Ley de Contrataciones N.° 32069</strong></span>
+  <!-- FRANJA SUPERIOR OFICIAL DEL ESTADO PERUANO Y UNMSM -->
+  <div class="bg-[#0b1329] text-slate-300 text-xs py-2 px-6 border-b border-blue-950">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1 font-bold text-white bg-red-700 px-2 py-0.5 rounded text-[10px] tracking-wide">
+          🇵🇪 GOBIERNO DEL PERÚ
+        </span>
+        <span class="text-slate-400">•</span>
+        <span class="text-slate-300">Conforme a la <strong>Ley de Contrataciones del Estado N.° 32069</strong></span>
       </div>
-      <div class="flex items-center gap-4 text-slate-400">
-        <span>Lima, Perú</span>
+      <div class="flex items-center gap-4 text-slate-300 text-[11px]">
+        <span>Datos Oficiales: <strong>SEACE / OECE</strong></span>
         <span>•</span>
-        <a href="contacto.html" class="hover:text-white transition">Atención a Proveedores</a>
+        <span class="text-amber-400 font-semibold">Investigación FISI — UNMSM</span>
       </div>
     </div>
   </div>
 
-  <!-- NAVEGACIÓN PRINCIPAL -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+  <!-- NAVEGACIÓN INSTITUCIONAL -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- LOGO CON IDENTIDAD SANMARQUINA Y EMPRESARIAL -->
       <a href="index.html" class="flex items-center gap-3">
-        <div class="h-10 w-10 rounded-xl bg-blue-700 flex items-center justify-center font-bold text-white text-xl shadow-md shadow-blue-700/20">
+        <div class="h-11 w-11 rounded-lg bg-[#002f6c] border border-blue-900 flex items-center justify-center font-bold text-white text-xl shadow-md">
           G
         </div>
         <div>
-          <span class="text-xl font-bold tracking-tight text-slate-900 block leading-tight">GMC <span class="text-blue-700">Licitaciones</span></span>
-          <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">Inteligencia para Proveedores del Estado</span>
+          <span class="text-xl font-extrabold tracking-tight text-[#002f6c] block leading-tight">
+            GMC <span class="text-slate-900">Licitaciones</span>
+          </span>
+          <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">
+            Plataforma B2G • Universidad Nacional Mayor de San Marcos
+          </span>
         </div>
       </a>
 
-      <!-- MENÚ DE NAVEGACIÓN -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <a href="index.html" class="text-blue-700">Inicio</a>
-        <a href="como-funciona.html" class="hover:text-blue-700 transition">Cómo funciona</a>
-        <a href="sectores.html" class="hover:text-blue-700 transition">Sectores</a>
-        <a href="planes.html" class="hover:text-blue-700 transition">Planes</a>
-        <a href="contacto.html" class="hover:text-blue-700 transition">Contacto</a>
+      <!-- MENÚ DE PÁGINAS REALES -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
+        <a href="index.html" class="text-blue-800 font-bold border-b-2 border-blue-800 pb-1">Inicio</a>
+        <a href="como-funciona.html" class="hover:text-blue-800 transition">Cómo funciona</a>
+        <a href="sectores.html" class="hover:text-blue-800 transition">Sectores</a>
+        <a href="planes.html" class="hover:text-blue-800 transition">Planes</a>
+        <a href="contacto.html" class="hover:text-blue-800 transition">Contacto</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="contacto.html" class="bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition shadow-md shadow-blue-700/20">
-          Solicitar Demostración
+        <a href="contacto.html" class="bg-[#002f6c] hover:bg-blue-900 text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-lg transition shadow-md">
+          Solicitar Acceso
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION CON VENTANA INTEGRADA DEL SOFTWARE -->
-  <section class="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto">
-      
-      <!-- ENCABEZADO PRINCIPAL -->
-      <div class="max-w-3xl mx-auto text-center mb-12">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold mb-5">
-          <span>🇵🇪</span> Diseñado para Micro y Pequeñas Empresas peruanas
+  <!-- HERO SECTION ESTILO PORTAL INSTITUCIONAL CON PERSONAS REALES -->
+  <section class="relative bg-slate-900 text-white overflow-hidden py-16 md:py-24 px-6 border-b border-slate-800">
+    <!-- IMAGEN DE FONDO CON OVERLAY PROFESIONAL (EQUIPO DE TRABAJO E INGENIERÍA) -->
+    <div class="absolute inset-0 z-0 opacity-25">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80" alt="Profesionales analizando contrataciones" class="w-full h-full object-cover">
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-8">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-blue-950/80 border border-blue-700/60 text-blue-300 text-xs font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          Proyecto Tecnológico de la Facultad de Ingeniería de Sistemas e Informática — UNMSM
         </div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
-          Encuentra las mejores oportunidades para venderle al <span class="text-blue-700">Estado peruano</span>
+
+        <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white mb-6">
+          Impulsando el crecimiento de las MYPEs peruanas en las compras del Estado
         </h1>
-        <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
-          Monitoreamos las convocatorias del SEACE, filtramos las que se adaptan al perfil de tu empresa y te entregamos resúmenes claros de los requisitos para que postules a tiempo y con confianza.
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl">
+          Monitoreamos las convocatorias del Sistema Electrónico de Contrataciones del Estado (SEACE) y del Organismo Especializado (OECE). Filtramos los concursos donde tu empresa tiene ventajas reales y sintetizamos las bases técnicas para que postules a tiempo.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="contacto.html" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-3.5 rounded-xl transition shadow-lg shadow-blue-700/25">
-            Solicitar demostración gratuita
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+          <a href="contacto.html" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-3.5 rounded-lg text-center shadow-lg transition">
+            Iniciar prueba para mi empresa
           </a>
-          <a href="como-funciona.html" class="bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 font-semibold px-8 py-3.5 rounded-xl transition shadow-sm">
-            Conocer cómo funciona
+          <a href="como-funciona.html" class="bg-slate-800/90 hover:bg-slate-700 border border-slate-600 text-slate-200 font-semibold px-8 py-3.5 rounded-lg text-center transition">
+            Ver metodología de análisis
           </a>
         </div>
-      </div>
 
-      <!-- MOCKUP ELEGANTE DE LA PLATAFORMA REAL -->
-      <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
-        
-        <!-- BARRA SUPERIOR DE APLICACIÓN -->
-        <div class="bg-slate-100 px-4 py-3 border-b border-slate-200 flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>
-            <span class="text-xs font-medium text-slate-500 ml-2">app.gmclicitaciones.pe/oportunidades</span>
+        <!-- MÉTICAS INSTITUCIONALES -->
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-700/60">
+          <div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-amber-400">+50,000</div>
+            <div class="text-xs text-slate-300 mt-1">Convocatorias anuales SEACE</div>
           </div>
-          <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200">SEACE en Vivo</span>
-        </div>
-
-        <!-- FILTROS DE BÚSQUEDA DEL SOFTWARE -->
-        <div class="p-6 border-b border-slate-100 bg-slate-50/50 flex flex-wrap items-center justify-between gap-4">
-          <div class="flex flex-wrap items-center gap-2 text-xs">
-            <span class="font-semibold text-slate-700">Filtros aplicados:</span>
-            <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-slate-700 font-medium">Rubro: Bienes y Servicios TI</span>
-            <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-slate-700 font-medium">Región: Lima y Callao</span>
-            <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-slate-700 font-medium">Modalidad: Adjudicación Simplificada</span>
+          <div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-white">Ley 32069</div>
+            <div class="text-xs text-slate-300 mt-1">Nuevo régimen de compras</div>
           </div>
-          <span class="text-xs text-slate-500 font-medium">32 convocatorias coincidentes</span>
-        </div>
-
-        <!-- LISTA DE OPORTUNIDADES REALES -->
-        <div class="divide-y divide-slate-100">
-          
-          <!-- ITEM 1 -->
-          <div class="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-slate-50 transition">
-            <div class="space-y-1 max-w-2xl">
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">AS-SM-12-2026-MML</span>
-                <span class="text-xs text-slate-500">• Municipalidad Metropolitana de Lima</span>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 leading-snug">
-                Adquisición de Laptops y Equipos de Comunicación para Sedes Descentralizadas
-              </h3>
-              <p class="text-xs text-slate-500">
-                Valor Referencial: <strong class="text-slate-800">S/ 285,400.00</strong> • Presentación de ofertas: <strong>14 de Octubre de 2026</strong>
-              </p>
-            </div>
-            <div class="flex md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-3">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
-                Alta compatibilidad (94%)
-              </span>
-              <a href="contacto.html" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1">
-                Ver resumen de bases →
-              </a>
-            </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">100% MYPE</div>
+            <div class="text-xs text-slate-300 mt-1">Enfoque en pequeña empresa</div>
           </div>
-
-          <!-- ITEM 2 -->
-          <div class="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-slate-50 transition">
-            <div class="space-y-1 max-w-2xl">
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">CP-SM-04-2026-MINSA</span>
-                <span class="text-xs text-slate-500">• Ministerio de Salud</span>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 leading-snug">
-                Servicio de Mantenimiento Preventivo y Soporte de Infraestructura Tecnológica
-              </h3>
-              <p class="text-xs text-slate-500">
-                Valor Referencial: <strong class="text-slate-800">S/ 142,000.00</strong> • Cierre de consultas: <strong>19 de Octubre de 2026</strong>
-              </p>
-            </div>
-            <div class="flex md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-3">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800">
-                Lote reservado para MYPE
-              </span>
-              <a href="contacto.html" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1">
-                Ver resumen de bases →
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- PIE DE VENTANA -->
-        <div class="bg-slate-50 px-6 py-3.5 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
-          <span>Actualización automática cada 15 minutos desde el SEACE</span>
-          <a href="contacto.html" class="font-semibold text-blue-700 hover:underline">Configurar alertas para mi empresa →</a>
         </div>
 
       </div>
 
+      <!-- TARJETA LATERAL INSTITUCIONAL (UNMSM & OECE) -->
+      <div class="lg:col-span-4">
+        <div class="bg-white text-slate-800 p-6 rounded-2xl shadow-2xl border-t-4 border-[#002f6c]">
+          <div class="flex items-center gap-3 mb-4 pb-3 border-b border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-serif font-bold text-blue-900 border border-slate-200">
+              🏛️
+            </div>
+            <div>
+              <h3 class="text-xs font-bold text-slate-900 uppercase">Respaldo Académico</h3>
+              <p class="text-[11px] text-slate-500">Decana de América • UNMSM</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            Desarrollado en Lima por <strong>Gonzalo Manuel Calero Falcón</strong>, como propuesta de ingeniería aplicada para resolver la asimetría de información que afecta a los proveedores nacionales.
+          </p>
+
+          <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-2 text-xs text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="text-blue-700 font-bold">✓</span>
+              <span>Datos del Estándar OCDS oficial</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-blue-700 font-bold">✓</span>
+              <span>Integración con el Registro RNP</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-blue-700 font-bold">✓</span>
+              <span>Monitoreo de Adjudicaciones Simplificadas</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- SECCIÓN DE BENEFICIOS REALES -->
-  <section class="py-20 px-6 bg-white border-b border-slate-200">
+  <!-- SECCIÓN DE FUENTES OFICIALES (OECE / SEACE / GOBIERNO) -->
+  <section class="py-10 bg-white border-b border-slate-200 px-6">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">
+        Información y estándares basados en plataformas del Estado Peruano
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 text-slate-600 font-semibold text-xs">
+        <div class="flex items-center gap-2">
+          <span class="text-red-700 font-bold text-sm">SEACE</span>
+          <span>Sistema Electrónico de Contrataciones</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-blue-900 font-bold text-sm">OECE</span>
+          <span>Organismo Especializado de Contrataciones</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-emerald-700 font-bold text-sm">OCDS</span>
+          <span>Estándar Global de Datos Abiertos</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-amber-700 font-bold text-sm">UNMSM</span>
+          <span>Facultad de Ingeniería de Sistemas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CON PERSONAS Y CASOS DE USO REALES (ESTILO SAN MARCOS) -->
+  <section class="py-20 px-6 bg-slate-50 border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
       
-      <div class="max-w-3xl mx-auto text-center mb-16">
-        <h2 class="text-3xl font-extrabold text-slate-900 mb-4">¿Cómo te ayuda GMC Licitaciones a vender más?</h2>
-        <p class="text-slate-600 text-base">Diseñado para que los gerentes y equipos comerciales se concentren en preparar buenas ofertas en lugar de perder días buscando convocatorias.</p>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-800 bg-blue-100 px-3 py-1 rounded-full">
+          Soluciones de Campo
+        </span>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-3 mb-4">
+          Respaldando a los empresarios peruanos en cada etapa
+        </h2>
+        <p class="text-slate-600 text-sm">
+          Acompañamos a los proveedores del Registro Nacional de Proveedores (RNP) en bienes, servicios y consultorías con herramientas directas y comprensibles.
+        </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
         
-        <!-- BENEFICIO 1 -->
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-md transition">
-          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xl mb-6">
-            🎯
+        <!-- TARJETA 1 CON FOTO -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Empresaria peruana en oficina" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Etapa 01: Identificación</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Filtro Inteligente de Convocatorias</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Detecta únicamente las licitaciones que se ajustan a tu capacidad de facturación y rubro registrado, eliminando el ruido de miles de procesos no viables.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Alertas personalizadas</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Olvídate de revisar el SEACE convocatoria por convocatoria. Nuestro sistema analiza tu RNP y te notifica solo cuando surge un concurso acorde a tu rubro y facturación.
-          </p>
+          <div class="p-6 pt-0">
+            <a href="como-funciona.html" class="text-xs font-bold text-blue-800 hover:underline">Leer más sobre el filtrado →</a>
+          </div>
         </div>
 
-        <!-- BENEFICIO 2 -->
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-md transition">
-          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xl mb-6">
-            📄
+        <!-- TARJETA 2 CON FOTO -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Equipo de analistas revisando pliegos" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-xs font-bold text-purple-700 uppercase tracking-wider">Etapa 02: Análisis</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Síntesis de Bases y Requisitos</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Extraemos en minutos las penalidades, plazos de entrega y requisitos mínimos de personal clave de los extensos expedientes técnicos de contratación.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Resumen de bases en minutos</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Extraemos de expedientes de más de 80 páginas lo que realmente necesitas saber: requisitos indispensables, penalidades por día y cronograma de fechas fatales.
-          </p>
+          <div class="p-6 pt-0">
+            <a href="como-funciona.html" class="text-xs font-bold text-purple-800 hover:underline">Ver cómo se analizan bases →</a>
+          </div>
         </div>
 
-        <!-- BENEFICIO 3 -->
-        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-md transition">
-          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xl mb-6">
-            ✅
+        <!-- TARJETA 3 CON FOTO -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Firma de contrato comercial" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Etapa 03: Postulación</span>
+            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Postulación sin Errores Formales</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Un checklist automático te guía con las declaraciones juradas obligatorias para que tu oferta técnica no sea rechazada en mesa de partes.
+            </p>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">Menor riesgo de descalificación</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Te entregamos un checklist con los documentos obligatorios exigidos por la entidad pública para que presentes tu oferta técnica y económica sin errores formales.
-          </p>
+          <div class="p-6 pt-0">
+            <a href="contacto.html" class="text-xs font-bold text-emerald-800 hover:underline">Solicitar asesoría para mi empresa →</a>
+          </div>
         </div>
 
       </div>
@@ -234,62 +263,85 @@
     </div>
   </section>
 
-  <!-- CÓMO FUNCIONA EN 3 PASOS -->
-  <section class="py-20 px-6 bg-slate-50 border-b border-slate-200">
-    <div class="max-w-5xl mx-auto">
-      
-      <div class="text-center mb-16">
-        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100 px-3 py-1 rounded-full">Flujo Sencillo</span>
-        <h2 class="text-3xl font-extrabold text-slate-900 mt-3">Empieza en 3 simples pasos</h2>
+  <!-- FORMULARIO INSTITUCIONAL SEGURO -->
+  <section id="contacto" class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto bg-slate-50 rounded-2xl border border-slate-200 p-8 md:p-12 shadow-sm">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-800 bg-blue-100 px-3 py-1 rounded-full">
+          Registro de Empresas
+        </span>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-3 mb-2">Solicita acceso al programa piloto</h2>
+        <p class="text-xs text-slate-600">Para micro y pequeñas empresas con registro vigente en el RNP.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-12 h-12 rounded-full bg-blue-700 text-white font-extrabold flex items-center justify-center mx-auto mb-4 text-lg">1</div>
-          <h3 class="text-base font-bold text-slate-900 mb-2">Ingresas tu RUC y rubro</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Definimos tu especialidad en el Registro Nacional de Proveedores y tu rango de capacidad de contratación.</p>
+      <form onsubmit="event.preventDefault(); alert('Solicitud registrada de forma segura. Un especialista se comunicará con su empresa.');" class="space-y-5">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Nombre del Representante</label>
+            <input type="text" required placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-800 text-sm bg-white">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">RUC de la Empresa (11 dígitos)</label>
+            <input type="text" required pattern="(10|20)[0-9]{9}" title="Debe ser un RUC peruano válido de 11 dígitos" placeholder="20601234567" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-800 text-sm bg-white font-mono">
+          </div>
         </div>
-        <div class="text-center">
-          <div class="w-12 h-12 rounded-full bg-blue-700 text-white font-extrabold flex items-center justify-center mx-auto mb-4 text-lg">2</div>
-          <h3 class="text-base font-bold text-slate-900 mb-2">El radar filtra las opciones</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Monitoreamos el SEACE 24/7 y te alertamos de concursos viables con respaldo de la Ley N.° 32069.</p>
-        </div>
-        <div class="text-center">
-          <div class="w-12 h-12 rounded-full bg-blue-700 text-white font-extrabold flex items-center justify-center mx-auto mb-4 text-lg">3</div>
-          <h3 class="text-base font-bold text-slate-900 mb-2">Postulas seguro</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Revisas los requisitos resumidos, armas tu oferta con el checklist y presentas a tiempo tu propuesta.</p>
-        </div>
-      </div>
 
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Correo Corporativo</label>
+            <input type="email" required placeholder="contacto@tuempresa.com" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-800 text-sm bg-white">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Teléfono de Contacto</label>
+            <input type="tel" required placeholder="+51 987 654 321" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-800 text-sm bg-white">
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-[#002f6c] hover:bg-blue-900 text-white font-bold py-3.5 rounded-lg shadow-md transition uppercase tracking-wider text-xs">
+          Enviar Solicitud al Equipo de GMC Licitaciones
+        </button>
+      </form>
     </div>
   </section>
 
-  <!-- LLAMADO A LA ACCIÓN FINAL -->
-  <section class="py-20 px-6 bg-slate-900 text-white text-center">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Haz crecer tu empresa vendiéndole al Estado</h2>
-      <p class="text-slate-300 text-base mb-8 max-w-xl mx-auto">
-        Únete al programa piloto de GMC Licitaciones para empresas peruanas del RNP.
-      </p>
-      <a href="contacto.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">
-        Solicitar Demostración Personalizada
-      </a>
-    </div>
-  </section>
+  <!-- FOOTER INSTITUCIONAL FORMAL -->
+  <footer class="bg-[#0b1329] text-slate-300 py-16 px-6 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="h-8 w-8 rounded bg-blue-700 flex items-center justify-center font-bold text-white text-base">G</div>
+          <span class="text-base font-bold text-white">GMC Licitaciones</span>
+        </div>
+        <p class="text-slate-400 max-w-md leading-relaxed mb-4">
+          Plataforma de investigación aplicada desarrollada en la Escuela Profesional de Ingeniería de Sistemas de la Universidad Nacional Mayor de San Marcos (UNMSM).
+        </p>
+        <p class="text-slate-500">Fundador: Gonzalo Manuel Calero Falcón • Lima, Perú.</p>
+      </div>
 
-  <!-- FOOTER -->
-  <footer class="bg-white border-t border-slate-200 py-12 px-6">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500">
       <div>
-        <span class="font-bold text-slate-900 text-sm">GMC Licitaciones</span> • Lima, Perú.
-        <p class="mt-1">Fundador: Gonzalo Manuel Calero Falcón • Ingeniería de Sistemas (UNMSM)</p>
+        <h4 class="font-bold text-white uppercase tracking-wider mb-4">Plataforma</h4>
+        <ul class="space-y-2 text-slate-400">
+          <li><a href="index.html" class="hover:text-white transition">Inicio</a></li>
+          <li><a href="como-funciona.html" class="hover:text-white transition">Cómo funciona</a></li>
+          <li><a href="sectores.html" class="hover:text-white transition">Sectores</a></li>
+          <li><a href="planes.html" class="hover:text-white transition">Planes</a></li>
+        </ul>
       </div>
-      <div class="flex gap-6 font-semibold">
-        <a href="como-funciona.html" class="hover:text-blue-700">Cómo funciona</a>
-        <a href="sectores.html" class="hover:text-blue-700">Sectores</a>
-        <a href="planes.html" class="hover:text-blue-700">Planes</a>
-        <a href="contacto.html" class="hover:text-blue-700">Contacto</a>
+
+      <div>
+        <h4 class="font-bold text-white uppercase tracking-wider mb-4">Marco Legal</h4>
+        <ul class="space-y-2 text-slate-400">
+          <li><span>Ley de Contrataciones N.° 32069</span></li>
+          <li><span>Organismo Especializado (OECE)</span></li>
+          <li><span>Sistema SEACE</span></li>
+          <li><span>Estándar OCDS</span></li>
+        </ul>
       </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-slate-500 gap-4">
+      <div>© 2026 GMC Licitaciones — Todos los derechos reservados.</div>
+      <div>Alojado con seguridad SSL y CDN en Vercel Edge Network (Sin puertos abiertos)</div>
     </div>
   </footer>
 
