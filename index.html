@@ -4,68 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- CABECERAS DE SEGURIDAD (ANTI-HACKING Y POLÍTICAS DE PROTECCIÓN) -->
+  <!-- CABECERAS DE SEGURIDAD (ANTI-HACKING) -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https:;">
   
-  <title>GMC Licitaciones | Radar Inteligente de Contrataciones del Estado para MYPEs</title>
-  <meta name="description" content="Plataforma tecnológica de análisis predictivo y síntesis de convocatorias SEACE para proveedores MYPEs en el Perú.">
+  <title>GMC Licitaciones | Plataforma de Inteligencia en Contrataciones del Estado</title>
+  <meta name="description" content="Encuentra, filtra y analiza convocatorias del SEACE adaptadas a tu empresa. Ahorra tiempo y postula con seguridad.">
 
   <!-- TAILWIND CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- TIPOGRAFÍA CORPORATIVA -->
+  <!-- TIPOGRAFÍA PROFESIONAL -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .font-mono-code { font-family: 'JetBrains Mono', monospace; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-white text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- BARRA INSTITUCIONAL SUPERIOR -->
-  <div class="bg-slate-950 text-slate-300 text-xs py-2.5 px-6 border-b border-slate-800">
+  <!-- BARRA SUPERIOR INSTITUCIONAL -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-6">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-2.5">
-        <span class="inline-flex items-center justify-center px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 font-mono text-[10px] font-bold border border-blue-700/50">PERÚ</span>
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Alineado a las disposiciones de la <strong>Ley de Contrataciones del Estado N.° 32069</strong></span>
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Actualizado conforme a las disposiciones de la nueva <strong>Ley de Contrataciones N.° 32069</strong></span>
       </div>
       <div class="flex items-center gap-4 text-slate-400">
-        <span class="flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-          Lima, Perú
-        </span>
+        <span>Lima, Perú</span>
         <span>•</span>
-        <span class="text-emerald-400 font-semibold flex items-center gap-1">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-          Conexión SSL Segura
-        </span>
+        <a href="contacto.html" class="hover:text-white transition">Atención a Proveedores</a>
       </div>
     </div>
   </div>
 
   <!-- NAVEGACIÓN PRINCIPAL -->
-  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group">
-        <div class="h-11 w-11 rounded-xl bg-blue-700 flex items-center justify-center font-black text-white text-xl shadow-lg shadow-blue-700/25 group-hover:bg-blue-800 transition">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-xl bg-blue-700 flex items-center justify-center font-bold text-white text-xl shadow-md shadow-blue-700/20">
           G
         </div>
         <div>
-          <span class="text-xl font-bold tracking-tight text-slate-950 block leading-tight">GMC <span class="text-blue-700">Licitaciones</span></span>
-          <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">Inteligencia B2G • RNP Perú</span>
+          <span class="text-xl font-bold tracking-tight text-slate-900 block leading-tight">GMC <span class="text-blue-700">Licitaciones</span></span>
+          <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">Inteligencia para Proveedores del Estado</span>
         </div>
       </a>
 
-      <!-- MENÚ MULTIPÁGINA -->
+      <!-- MENÚ DE NAVEGACIÓN -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
-        <a href="index.html" class="text-blue-700 border-b-2 border-blue-700 pb-1">Inicio</a>
+        <a href="index.html" class="text-blue-700">Inicio</a>
         <a href="como-funciona.html" class="hover:text-blue-700 transition">Cómo funciona</a>
         <a href="sectores.html" class="hover:text-blue-700 transition">Sectores</a>
         <a href="planes.html" class="hover:text-blue-700 transition">Planes</a>
@@ -73,448 +64,234 @@
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#simulador" class="hidden sm:inline-flex text-xs font-bold text-slate-700 hover:text-blue-700 px-3 py-2 transition">
-          Probar simulador
-        </a>
-        <a href="contacto.html" class="bg-blue-700 hover:bg-blue-800 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition shadow-md shadow-blue-700/20">
+        <a href="contacto.html" class="bg-blue-700 hover:bg-blue-800 text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition shadow-md shadow-blue-700/20">
           Solicitar Demostración
         </a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION PRINCIPAL -->
-  <section class="relative pt-16 pb-20 md:pt-24 md:pb-28 px-6 bg-gradient-to-b from-white via-slate-50 to-slate-100 border-b border-slate-200 overflow-hidden">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+  <!-- HERO SECTION CON VENTANA INTEGRADA DEL SOFTWARE -->
+  <section class="py-16 md:py-20 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
       
-      <div class="lg:col-span-7">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/70 border border-blue-200 text-blue-900 text-xs font-bold mb-6">
-          <span class="w-2 h-2 rounded-full bg-blue-600"></span>
-          Radar Automatizado del SEACE y Organismo Especializado (OECE)
+      <!-- ENCABEZADO PRINCIPAL -->
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold mb-5">
+          <span>🇵🇪</span> Diseñado para Micro y Pequeñas Empresas peruanas
         </div>
-        
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.12] mb-6">
-          Gana licitaciones públicas en el Perú con <span class="text-blue-700">precisión analítica</span>.
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+          Encuentra las mejores oportunidades para venderle al <span class="text-blue-700">Estado peruano</span>
         </h1>
-        
-        <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-2xl">
-          Monitoreamos más de 50,000 convocatorias anuales, calculamos el porcentaje de compatibilidad con el RNP de tu empresa y sintetizamos pliegos de bases de 80 páginas en un checklist directo de postulación.
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8">
+          Monitoreamos las convocatorias del SEACE, filtramos las que se adaptan al perfil de tu empresa y te entregamos resúmenes claros de los requisitos para que postules a tiempo y con confianza.
         </p>
-
-        <div class="flex flex-col sm:flex-row gap-4 mb-10">
-          <a href="contacto.html" class="bg-blue-700 hover:bg-blue-800 text-white font-bold px-8 py-4 rounded-xl text-center shadow-lg shadow-blue-700/25 transition flex items-center justify-center gap-2">
-            <span>Iniciar piloto para mi empresa</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="contacto.html" class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-8 py-3.5 rounded-xl transition shadow-lg shadow-blue-700/25">
+            Solicitar demostración gratuita
           </a>
-          <a href="#simulador" class="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-bold px-8 py-4 rounded-xl text-center transition shadow-sm flex items-center justify-center gap-2">
-            <span>Calcular viabilidad en vivo</span>
-            <svg class="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          <a href="como-funciona.html" class="bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 font-semibold px-8 py-3.5 rounded-xl transition shadow-sm">
+            Conocer cómo funciona
           </a>
-        </div>
-
-        <!-- INDICADORES CLAVE -->
-        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200">
-          <div>
-            <div class="text-2xl sm:text-3xl font-extrabold text-slate-950 font-mono-code">+50,000</div>
-            <div class="text-xs text-slate-500 font-semibold mt-1">Convocatorias evaluadas</div>
-          </div>
-          <div>
-            <div class="text-2xl sm:text-3xl font-extrabold text-blue-700 font-mono-code">94.2%</div>
-            <div class="text-xs text-slate-500 font-semibold mt-1">Precisión de idoneidad</div>
-          </div>
-          <div>
-            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-600 font-mono-code">&lt; 3 min</div>
-            <div class="text-xs text-slate-500 font-semibold mt-1">Síntesis de TDRs y bases</div>
-          </div>
         </div>
       </div>
 
-      <!-- PANEL LATERAL CON MOCKUP DE SEACE -->
-      <div class="lg:col-span-5">
-        <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden">
-          <div class="bg-slate-900 px-5 py-4 flex items-center justify-between text-white border-b border-slate-800">
-            <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-              <span class="text-xs font-mono font-bold tracking-wider uppercase">SEACE Monitor • En Vivo</span>
-            </div>
-            <span class="text-[11px] font-mono bg-slate-800 px-2.5 py-1 rounded text-slate-300">OCDS JSON</span>
+      <!-- MOCKUP ELEGANTE DE LA PLATAFORMA REAL -->
+      <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+        
+        <!-- BARRA SUPERIOR DE APLICACIÓN -->
+        <div class="bg-slate-100 px-4 py-3 border-b border-slate-200 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-slate-300 inline-block"></span>
+            <span class="text-xs font-medium text-slate-500 ml-2">app.gmclicitaciones.pe/oportunidades</span>
           </div>
+          <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200">SEACE en Vivo</span>
+        </div>
 
-          <div class="p-6 space-y-4">
-            <!-- TARJETA SEACE 1 -->
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-400 hover:shadow-md transition">
-              <div class="flex justify-between items-start mb-1.5">
-                <span class="text-[11px] font-mono-code font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">AS-SM-12-2026-MML</span>
-                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">Score: 96%</span>
-              </div>
-              <h4 class="text-xs font-bold text-slate-950 leading-snug">Adquisición de Laptops y Equipos de Red para Sedes Descentralizadas</h4>
-              <p class="text-[11px] text-slate-500 mt-1">Municipalidad de Lima • Monto: <strong class="text-slate-800">S/ 285,400.00</strong></p>
-              
-              <div class="mt-3 pt-2.5 border-t border-slate-200 flex items-center justify-between text-[11px]">
-                <span class="text-slate-600">Consultas: <strong>4 días restantes</strong></span>
-                <span class="text-blue-700 font-bold hover:underline cursor-pointer">Ver requisitos clave →</span>
-              </div>
-            </div>
+        <!-- FILTROS DE BÚSQUEDA DEL SOFTWARE -->
+        <div class="p-6 border-b border-slate-100 bg-slate-50/50 flex flex-wrap items-center justify-between gap-4">
+          <div class="flex flex-wrap items-center gap-2 text-xs">
+            <span class="font-semibold text-slate-700">Filtros aplicados:</span>
+            <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-slate-700 font-medium">Rubro: Bienes y Servicios TI</span>
+            <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-slate-700 font-medium">Región: Lima y Callao</span>
+            <span class="bg-white border border-slate-200 px-3 py-1 rounded-md text-slate-700 font-medium">Modalidad: Adjudicación Simplificada</span>
+          </div>
+          <span class="text-xs text-slate-500 font-medium">32 convocatorias coincidentes</span>
+        </div>
 
-            <!-- TARJETA SEACE 2 -->
-            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-400 hover:shadow-md transition">
-              <div class="flex justify-between items-start mb-1.5">
-                <span class="text-[11px] font-mono-code font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">CP-SM-4-2026-MINSA</span>
-                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full">Score: 91%</span>
+        <!-- LISTA DE OPORTUNIDADES REALES -->
+        <div class="divide-y divide-slate-100">
+          
+          <!-- ITEM 1 -->
+          <div class="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-slate-50 transition">
+            <div class="space-y-1 max-w-2xl">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">AS-SM-12-2026-MML</span>
+                <span class="text-xs text-slate-500">• Municipalidad Metropolitana de Lima</span>
               </div>
-              <h4 class="text-xs font-bold text-slate-950 leading-snug">Servicio de Mantenimiento Preventivo y Soporte de Infraestructura TI</h4>
-              <p class="text-[11px] text-slate-500 mt-1">Ministerio de Salud • Monto: <strong class="text-slate-800">S/ 142,000.00</strong></p>
-              
-              <div class="mt-3 pt-2.5 border-t border-slate-200 flex items-center justify-between text-[11px]">
-                <span class="text-slate-600">Presentación: <strong>7 días restantes</strong></span>
-                <span class="text-blue-700 font-bold hover:underline cursor-pointer">Ver requisitos clave →</span>
-              </div>
-            </div>
-
-            <!-- CALLOUT EXPLICATIVO -->
-            <div class="p-3 bg-blue-50/80 rounded-xl border border-blue-200 flex items-center gap-3">
-              <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs flex-shrink-0">
-                AI
-              </div>
-              <p class="text-xs text-blue-900 leading-snug">
-                <strong>Análisis Explicable (XAI):</strong> El sistema prioriza contratos donde tu experiencia acreditada en el RNP cumple el 100% de los requisitos.
+              <h3 class="text-base font-bold text-slate-900 leading-snug">
+                Adquisición de Laptops y Equipos de Comunicación para Sedes Descentralizadas
+              </h3>
+              <p class="text-xs text-slate-500">
+                Valor Referencial: <strong class="text-slate-800">S/ 285,400.00</strong> • Presentación de ofertas: <strong>14 de Octubre de 2026</strong>
               </p>
             </div>
+            <div class="flex md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-3">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                Alta compatibilidad (94%)
+              </span>
+              <a href="contacto.html" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1">
+                Ver resumen de bases →
+              </a>
+            </div>
           </div>
+
+          <!-- ITEM 2 -->
+          <div class="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-slate-50 transition">
+            <div class="space-y-1 max-w-2xl">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">CP-SM-04-2026-MINSA</span>
+                <span class="text-xs text-slate-500">• Ministerio de Salud</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 leading-snug">
+                Servicio de Mantenimiento Preventivo y Soporte de Infraestructura Tecnológica
+              </h3>
+              <p class="text-xs text-slate-500">
+                Valor Referencial: <strong class="text-slate-800">S/ 142,000.00</strong> • Cierre de consultas: <strong>19 de Octubre de 2026</strong>
+              </p>
+            </div>
+            <div class="flex md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-3">
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800">
+                Lote reservado para MYPE
+              </span>
+              <a href="contacto.html" class="text-xs font-semibold text-blue-700 hover:text-blue-800 flex items-center gap-1">
+                Ver resumen de bases →
+              </a>
+            </div>
+          </div>
+
         </div>
+
+        <!-- PIE DE VENTANA -->
+        <div class="bg-slate-50 px-6 py-3.5 border-t border-slate-200 flex items-center justify-between text-xs text-slate-600">
+          <span>Actualización automática cada 15 minutos desde el SEACE</span>
+          <a href="contacto.html" class="font-semibold text-blue-700 hover:underline">Configurar alertas para mi empresa →</a>
+        </div>
+
       </div>
 
     </div>
   </section>
 
-  <!-- SECCIÓN FOTOGRÁFICA Y DE SECTORES ATENDIDOS -->
+  <!-- SECCIÓN DE BENEFICIOS REALES -->
   <section class="py-20 px-6 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Rubros con Mayor Demanda Estatal</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-950 mt-4 mb-4">¿Para qué empresas funciona?</h2>
-        <p class="text-slate-600 text-base">La plataforma cubre las 3 grandes categorías del Registro Nacional de Proveedores (RNP) en el Perú.</p>
+      
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-4">¿Cómo te ayuda GMC Licitaciones a vender más?</h2>
+        <p class="text-slate-600 text-base">Diseñado para que los gerentes y equipos comerciales se concentren en preparar buenas ofertas en lugar de perder días buscando convocatorias.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- SECTOR 1 -->
-        <div class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 shadow-sm hover:shadow-lg transition">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Tecnología y sistemas" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Bienes y Servicios TI</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Equipos de Cómputo, Software y Redes</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Monitoreo de órdenes de compra, catálogos electrónicos y licitaciones de renovación tecnológica en ministerios, gobiernos regionales y municipios.
-            </p>
+        
+        <!-- BENEFICIO 1 -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xl mb-6">
+            🎯
           </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Alertas personalizadas</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Olvídate de revisar el SEACE convocatoria por convocatoria. Nuestro sistema analiza tu RNP y te notifica solo cuando surge un concurso acorde a tu rubro y facturación.
+          </p>
         </div>
 
-        <!-- SECTOR 2 -->
-        <div class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 shadow-sm hover:shadow-lg transition">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Servicios generales y mantenimiento" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">Servicios Generales</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Mantenimiento, Limpieza y Vigilancia</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Alertas inmediatas de adjudicaciones simplificadas y concursos públicos de servicios esenciales con reserva especial para microempresas.
-            </p>
+        <!-- BENEFICIO 2 -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-xl mb-6">
+            📄
           </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Resumen de bases en minutos</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Extraemos de expedientes de más de 80 páginas lo que realmente necesitas saber: requisitos indispensables, penalidades por día y cronograma de fechas fatales.
+          </p>
         </div>
 
-        <!-- SECTOR 3 -->
-        <div class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50 shadow-sm hover:shadow-lg transition">
-          <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80" alt="Consultoría y suministros" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <span class="text-xs font-bold text-purple-700 uppercase tracking-wider">Suministros y Consultoría</span>
-            <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Ferretería, Materiales e Ingeniería</h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Detección de convocatorias para dotación de insumos de obra, estudios técnicos de preinversión y consultoría especializada.
-            </p>
+        <!-- BENEFICIO 3 -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:shadow-md transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xl mb-6">
+            ✅
           </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Menor riesgo de descalificación</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Te entregamos un checklist con los documentos obligatorios exigidos por la entidad pública para que presentes tu oferta técnica y económica sin errores formales.
+          </p>
         </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- SIMULADOR INTERACTIVO DE COMPATIBILIDAD SEACE -->
-  <section id="simulador" class="py-20 px-6 bg-slate-900 text-white">
+  <!-- CÓMO FUNCIONA EN 3 PASOS -->
+  <section class="py-20 px-6 bg-slate-50 border-b border-slate-200">
     <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-12">
-        <span class="text-xs font-mono font-bold uppercase tracking-wider text-blue-400 bg-blue-950 px-3 py-1 rounded-full border border-blue-800">Herramienta Interactiva</span>
-        <h2 class="text-3xl font-extrabold mt-3">Calcula el potencial de tu empresa en el SEACE</h2>
-        <p class="text-slate-400 text-sm mt-2 max-w-xl mx-auto">Selecciona tu categoría de proveedor y tu nivel de facturación para simular el filtrado de convocatorias.</p>
+      
+      <div class="text-center mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100 px-3 py-1 rounded-full">Flujo Sencillo</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 mt-3">Empieza en 3 simples pasos</h2>
       </div>
 
-      <div class="bg-slate-800/90 rounded-3xl p-8 border border-slate-700 shadow-2xl grid md:grid-cols-12 gap-8 items-center">
-        <div class="md:col-span-6 space-y-6">
-          <div>
-            <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">1. Rubro Principal de tu RNP:</label>
-            <select id="rubroSelect" onchange="calcularSimulacion()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="bienes">Bienes (Equipos informáticos, útiles, insumos)</option>
-              <option value="servicios">Servicios Generales (Mantenimiento, transporte)</option>
-              <option value="consultoria">Consultoría y Desarrollo de Software</option>
-            </select>
-          </div>
-
-          <div>
-            <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">2. Facturación anual aproximada:</label>
-            <select id="montoSelect" onchange="calcularSimulacion()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="50">Hasta S/ 150,000 (Microempresa nueva)</option>
-              <option value="250">S/ 150,000 a S/ 500,000 (MYPE en crecimiento)</option>
-              <option value="1000">Más de S/ 500,000 (Pequeña empresa consolidada)</option>
-            </select>
-          </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-blue-700 text-white font-extrabold flex items-center justify-center mx-auto mb-4 text-lg">1</div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Ingresas tu RUC y rubro</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Definimos tu especialidad en el Registro Nacional de Proveedores y tu rango de capacidad de contratación.</p>
         </div>
-
-        <div class="md:col-span-6 bg-slate-900 p-6 rounded-2xl border border-slate-700/80 text-center">
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-1">Convocatorias viables estimadas hoy:</div>
-          <div id="resConvocatorias" class="text-4xl font-extrabold text-blue-400 font-mono-code my-2">38 Procesos</div>
-          <div class="text-xs text-slate-300 mb-4">Monto total disponible para postular: <strong id="resMonto" class="text-emerald-400 font-mono-code">S/ 1,420,000</strong></div>
-          
-          <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-left text-xs text-slate-300 space-y-1">
-            <div class="flex justify-between"><span>Probabilidad media de calificación:</span> <strong id="resProb" class="text-emerald-400">92%</strong></div>
-            <div class="flex justify-between"><span>Modalidad recomendada:</span> <strong id="resModalidad" class="text-blue-300">Adjudicación Simplificada</strong></div>
-          </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-blue-700 text-white font-extrabold flex items-center justify-center mx-auto mb-4 text-lg">2</div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">El radar filtra las opciones</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Monitoreamos el SEACE 24/7 y te alertamos de concursos viables con respaldo de la Ley N.° 32069.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-blue-700 text-white font-extrabold flex items-center justify-center mx-auto mb-4 text-lg">3</div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Postulas seguro</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Revisas los requisitos resumidos, armas tu oferta con el checklist y presentas a tiempo tu propuesta.</p>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- PREGUNTAS FRECUENTES INTERACTIVAS -->
-  <section class="py-20 px-6 bg-white border-b border-slate-200">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-14">
-        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Resolución de Dudas</span>
-        <h2 class="text-3xl font-extrabold text-slate-950 mt-3">Preguntas Frecuentes sobre el Servicio</h2>
-      </div>
-
-      <div class="space-y-4">
-        <!-- FAQ 1 -->
-        <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
-          <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-100 transition">
-            <span>¿GMC Licitaciones reemplaza al portal oficial del SEACE?</span>
-            <span id="faq-icon-1" class="text-blue-700 text-lg font-mono">+</span>
-          </button>
-          <div id="faq-content-1" class="hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-200/60 leading-relaxed">
-            No. GMC Licitaciones es una plataforma de inteligencia analítica y asistencia al proveedor. Extrae los datos abiertos oficiales del SEACE y del Organismo Especializado (OECE) bajo el estándar OCDS para filtrar oportunidades y resumirte las bases. La presentación formal de tu oferta se realiza en el sistema oficial del Estado.
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
-          <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-100 transition">
-            <span>¿Qué ventajas introduce la nueva Ley N.° 32069 para las MYPEs?</span>
-            <span id="faq-icon-2" class="text-blue-700 text-lg font-mono">+</span>
-          </button>
-          <div id="faq-content-2" class="hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-200/60 leading-relaxed">
-            La Ley N.° 32069 prioriza las contrataciones por lotes para permitir la entrada de pequeñas empresas, promueve la simplificación de requisitos de experiencia y busca mayor transparencia en la asignación del valor por dinero, facilitando que postores con menor capital puedan adjudicarse contratos estatales.
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
-          <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-bold text-slate-900 flex justify-between items-center hover:bg-slate-100 transition">
-            <span>¿Cómo se realiza el análisis automático de las bases de licitación?</span>
-            <span id="faq-icon-3" class="text-blue-700 text-lg font-mono">+</span>
-          </button>
-          <div id="faq-content-3" class="hidden p-5 pt-0 text-sm text-slate-600 border-t border-slate-200/60 leading-relaxed">
-            Utilizamos modelos de lenguaje de última generación mediante integración con la API de Claude de Anthropic. El sistema lee los expedientes PDF de decenas de páginas y extrae de forma estructurada los requisitos de habilitación, plazos de entrega, garantías requeridas y penalidades aplicables.
-          </div>
-        </div>
-      </div>
+  <!-- LLAMADO A LA ACCIÓN FINAL -->
+  <section class="py-20 px-6 bg-slate-900 text-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">Haz crecer tu empresa vendiéndole al Estado</h2>
+      <p class="text-slate-300 text-base mb-8 max-w-xl mx-auto">
+        Únete al programa piloto de GMC Licitaciones para empresas peruanas del RNP.
+      </p>
+      <a href="contacto.html" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">
+        Solicitar Demostración Personalizada
+      </a>
     </div>
   </section>
 
-  <!-- FORMULARIO SEGURO DE CONTACTO Y SOLICITUD DE PILOTO -->
-  <section id="contacto" class="py-20 px-6 bg-slate-50">
-    <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200 shadow-xl p-8 sm:p-12">
-      <div class="text-center max-w-xl mx-auto mb-10">
-        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">Acceso Exclusivo</span>
-        <h2 class="text-3xl font-extrabold text-slate-950 mt-3 mb-2">Solicita una demostración guiada</h2>
-        <p class="text-sm text-slate-600">Completa los datos de tu empresa para que un especialista configure tu radar con convocatorias reales de tu rubro.</p>
-      </div>
-
-      <form id="pilotoForm" onsubmit="validarYEnviarFormulario(event)" class="space-y-6">
-        <div class="grid sm:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nombre y Apellidos</label>
-            <input type="text" id="nombreInput" required maxlength="80" placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm bg-slate-50">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">RUC de la Empresa (11 dígitos)</label>
-            <input type="text" id="rucInput" required maxlength="11" placeholder="Ej. 20601234567" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm bg-slate-50 font-mono">
-            <span id="rucError" class="text-xs text-red-600 hidden mt-1 block">El RUC debe tener 11 dígitos y empezar con 10 o 20.</span>
-          </div>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-6">
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Correo Corporativo</label>
-            <input type="email" id="emailInput" required maxlength="100" placeholder="contacto@tuempresa.pe" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm bg-slate-50">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Teléfono / WhatsApp</label>
-            <input type="tel" id="telInput" required maxlength="15" placeholder="+51 987 654 321" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-sm bg-slate-50 font-mono">
-          </div>
-        </div>
-
-        <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-700/25 transition">
-          Solicitar Demostración Personalizada
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER INSTITUCIONAL -->
-  <footer class="bg-white border-t border-slate-200 py-16 px-6">
-    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-      <div class="col-span-2">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="h-8 w-8 rounded-lg bg-blue-700 flex items-center justify-center font-bold text-white text-base">G</div>
-          <span class="text-lg font-bold text-slate-900">GMC <span class="text-blue-700">Licitaciones</span></span>
-        </div>
-        <p class="text-sm text-slate-500 max-w-sm leading-relaxed mb-4">
-          Plataforma de inteligencia y analítica predictiva de compras públicas para MYPEs. Proyecto nacido en la Facultad de Ingeniería de Sistemas e Informática de la UNMSM.
-        </p>
-        <p class="text-xs text-slate-400">Lima, Perú • © 2026 GMC Licitaciones.</p>
-      </div>
-
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500">
       <div>
-        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">Navegación</h4>
-        <ul class="space-y-2.5 text-sm text-slate-600">
-          <li><a href="index.html" class="hover:text-blue-700 transition">Inicio</a></li>
-          <li><a href="como-funciona.html" class="hover:text-blue-700 transition">Cómo funciona</a></li>
-          <li><a href="sectores.html" class="hover:text-blue-700 transition">Sectores</a></li>
-        </ul>
+        <span class="font-bold text-slate-900 text-sm">GMC Licitaciones</span> • Lima, Perú.
+        <p class="mt-1">Fundador: Gonzalo Manuel Calero Falcón • Ingeniería de Sistemas (UNMSM)</p>
       </div>
-
-      <div>
-        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">Servicios</h4>
-        <ul class="space-y-2.5 text-sm text-slate-600">
-          <li><a href="planes.html" class="hover:text-blue-700 transition">Planes</a></li>
-          <li><a href="contacto.html" class="hover:text-blue-700 transition">Solicitar Demo</a></li>
-        </ul>
+      <div class="flex gap-6 font-semibold">
+        <a href="como-funciona.html" class="hover:text-blue-700">Cómo funciona</a>
+        <a href="sectores.html" class="hover:text-blue-700">Sectores</a>
+        <a href="planes.html" class="hover:text-blue-700">Planes</a>
+        <a href="contacto.html" class="hover:text-blue-700">Contacto</a>
       </div>
-
-      <div>
-        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">Normativa</h4>
-        <ul class="space-y-2.5 text-sm text-slate-600">
-          <li><span class="text-slate-400">Ley N.° 32069</span></li>
-          <li><span class="text-slate-400">Datos SEACE / OECE</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="max-w-7xl mx-auto pt-8 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-4">
-      <div>Fundador: Gonzalo Manuel Calero Falcón • Escuela Profesional de Ingeniería de Sistemas (UNMSM)</div>
-      <div>Desplegado con HTTPS seguro en Vercel Cloud</div>
     </div>
   </footer>
 
-  <!-- JAVASCRIPT SEGURO PARA EL SIMULADOR Y EL FORMULARIO -->
-  <script>
-    // SIMULADOR DE COMPATIBILIDAD
-    function calcularSimulacion() {
-      const rubro = document.getElementById('rubroSelect').value;
-      const monto = document.getElementById('montoSelect').value;
-      
-      const convElement = document.getElementById('resConvocatorias');
-      const montoElement = document.getElementById('resMonto');
-      const probElement = document.getElementById('resProb');
-      const modElement = document.getElementById('resModalidad');
-
-      if (rubro === 'bienes') {
-        if (monto === '50') {
-          convElement.innerText = "24 Procesos";
-          montoElement.innerText = "S/ 380,000";
-          probElement.innerText = "94%";
-          modElement.innerText = "Comparación de Precios / AS";
-        } else if (monto === '250') {
-          convElement.innerText = "52 Procesos";
-          montoElement.innerText = "S/ 1,850,000";
-          probElement.innerText = "91%";
-          modElement.innerText = "Adjudicación Simplificada";
-        } else {
-          convElement.innerText = "88 Procesos";
-          montoElement.innerText = "S/ 4,920,000";
-          probElement.innerText = "88%";
-          modElement.innerText = "Licitación Pública";
-        }
-      } else if (rubro === 'servicios') {
-        if (monto === '50') {
-          convElement.innerText = "19 Procesos";
-          montoElement.innerText = "S/ 290,000";
-          probElement.innerText = "95%";
-          modElement.innerText = "Adjudicación Simplificada MYPE";
-        } else if (monto === '250') {
-          convElement.innerText = "44 Procesos";
-          montoElement.innerText = "S/ 1,320,000";
-          probElement.innerText = "92%";
-          modElement.innerText = "Concurso Público / AS";
-        } else {
-          convElement.innerText = "71 Procesos";
-          montoElement.innerText = "S/ 3,600,000";
-          probElement.innerText = "87%";
-          modElement.innerText = "Concurso Público";
-        }
-      } else {
-        if (monto === '50') {
-          convElement.innerText = "14 Procesos";
-          montoElement.innerText = "S/ 240,000";
-          probElement.innerText = "96%";
-          modElement.innerText = "Contratación Directa / AS";
-        } else if (monto === '250') {
-          convElement.innerText = "36 Procesos";
-          montoElement.innerText = "S/ 980,000";
-          probElement.innerText = "93%";
-          modElement.innerText = "Adjudicación Simplificada";
-        } else {
-          convElement.innerText = "58 Procesos";
-          montoElement.innerText = "S/ 2,800,000";
-          probElement.innerText = "89%";
-          modElement.innerText = "Concurso de Consultoría";
-        }
-      }
-    }
-
-    // ACORDEÓN DE PREGUNTAS FRECUENTES
-    function toggleFaq(num) {
-      const content = document.getElementById(`faq-content-${num}`);
-      const icon = document.getElementById(`faq-icon-${num}`);
-      if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        icon.innerText = "−";
-      } else {
-        content.classList.add('hidden');
-        icon.innerText = "+";
-      }
-    }
-
-    // SANITIZACIÓN Y VALIDACIÓN SEGURA DEL FORMULARIO
-    function sanitize(str) {
-      return str.replace(/[<>"'/]/g, '');
-    }
-
-    function validarYEnviarFormulario(event) {
-      event.preventDefault();
-      const ruc = document.getElementById('rucInput').value.trim();
-      const rucError = document.getElementById('rucError');
-
-      // Validación estricta de RUC peruano (11 dígitos, empieza en 10 o 20)
-      const rucValido = /^(10|20)\d{9}$/.test(ruc);
-
-      if (!rucValido) {
-        rucError.classList.remove('hidden');
-        return false;
-      } else {
-        rucError.classList.add('hidden');
-      }
-
-      const nombre = sanitize(document.getElementById('nombreInput').value.trim());
-      alert(`¡Gracias, ${nombre}! Tu solicitud ha sido registrada de forma segura. Un especialista se comunicará contigo.`);
-      document.getElementById('pilotoForm').reset();
-      return true;
-    }
-  </script>
 </body>
 </html>
