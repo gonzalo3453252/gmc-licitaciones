@@ -4,64 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- CABECERAS DE SEGURIDAD (ANTI-HACKING, SIN PUERTOS NI VALORES POR DEFECTO) -->
+  <!-- CABECERAS DE SEGURIDAD (ANTI-HACKING Y PROTECCIÓN) -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   
-  <title>GMC Licitaciones | Plataforma de Inteligencia en Contrataciones del Estado</title>
-  <meta name="description" content="Radar inteligente de compras públicas para empresas proveedoras del Estado en el Perú.">
+  <title>GMC Licitaciones | Inteligencia Estratégica en Compras del Estado</title>
+  <meta name="description" content="Plataforma de inteligencia y análisis de contrataciones públicas para proveedores del Estado en el Perú.">
 
   <!-- TAILWIND CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- TIPOGRAFÍA MODERNA -->
+  <!-- TIPOGRAFÍA FORMAL -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    .font-mono-num { font-family: 'JetBrains Mono', monospace; }
+    .carousel-slide { transition: opacity 0.8s ease-in-out; }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
-
-  <!-- NOTIFICACIÓN FLOTANTE (TOAST DINÁMICO) -->
-  <div id="toastNotification" class="fixed top-5 right-5 z-50 transform translate-x-96 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 text-white px-5 py-3.5 rounded-xl shadow-2xl border border-slate-700 flex items-center gap-3 text-sm">
-    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-    <span id="toastMessage">Alerta activada correctamente</span>
-  </div>
+<body class="bg-white text-slate-800 antialiased selection:bg-blue-700 selection:text-white">
 
   <!-- BARRA SUPERIOR INSTITUCIONAL -->
   <div class="bg-slate-950 text-slate-300 text-xs py-2 px-6 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-2.5">
+      <div class="flex items-center gap-2">
         <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span>Alineado a las normativas de la <strong>Ley de Contrataciones del Estado N.° 32069</strong></span>
+        <span>Alineado a las normativas de la nueva <strong>Ley de Contrataciones del Estado N.° 32069</strong></span>
       </div>
       <div class="flex items-center gap-4 text-slate-400">
         <span>🇵🇪 Lima, Perú</span>
         <span>•</span>
-        <a href="contacto.html" class="hover:text-white transition">Centro de Atención a Proveedores</a>
+        <a href="contacto.html" class="hover:text-white transition">Atención a Proveedores</a>
       </div>
     </div>
   </div>
 
   <!-- NAVEGACIÓN PRINCIPAL -->
-  <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="h-11 w-11 rounded-xl bg-blue-700 flex items-center justify-center font-extrabold text-white text-xl shadow-lg shadow-blue-700/20">
+        <div class="h-11 w-11 rounded-xl bg-blue-700 flex items-center justify-center font-black text-white text-xl shadow-md shadow-blue-700/20">
           G
         </div>
         <div>
           <span class="text-xl font-bold tracking-tight text-slate-950 block leading-tight">GMC <span class="text-blue-700">Licitaciones</span></span>
-          <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">Inteligencia B2G para Proveedores del Estado</span>
+          <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">Inteligencia Estratégica en Compras Públicas</span>
         </div>
       </a>
 
-      <!-- ENLACES REALES A OTRAS PÁGINAS -->
+      <!-- MENÚ MULTIPÁGINA -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
         <a href="index.html" class="text-blue-700 border-b-2 border-blue-700 pb-1">Inicio</a>
         <a href="como-funciona.html" class="hover:text-blue-700 transition">Cómo funciona</a>
@@ -78,430 +72,286 @@
     </div>
   </header>
 
-  <!-- HERO SECTION CON FOTOGRAFÍA PROFESIONAL -->
-  <section class="relative bg-gradient-to-b from-white via-slate-50 to-slate-100 py-16 md:py-24 px-6 border-b border-slate-200">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
+  <!-- CARRUSEL DINÁMICO DE IMÁGENES (ESTILO PORTAL INSTITUCIONAL) -->
+  <section class="relative bg-slate-900 text-white overflow-hidden h-[540px] md:h-[600px]">
+    
+    <!-- SLIDE 1 -->
+    <div id="slide-0" class="carousel-slide absolute inset-0 opacity-100 flex items-center">
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80" alt="Equipo de profesionales analizando contrataciones" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
       
-      <div class="lg:col-span-7">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold mb-6">
-          <span>🇵🇪</span> Monitoreo en tiempo real del SEACE y compras públicas
-        </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.12] mb-6">
-          Encuentra y gana las licitaciones públicas que <span class="text-blue-700">calzan con tu empresa</span>
-        </h1>
-        <p class="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
-          Analizamos las convocatorias del Estado, filtramos las que coinciden con tu especialidad y facturación en el RNP, y te entregamos resúmenes ejecutivos para postular sin errores.
-        </p>
-        
-        <div class="flex flex-col sm:flex-row gap-4 mb-12">
-          <a href="#radar-en-vivo" class="bg-blue-700 hover:bg-blue-800 text-white font-bold px-8 py-4 rounded-xl text-center shadow-lg shadow-blue-700/25 transition">
-            Probar radar interactivo en vivo
-          </a>
-          <a href="contacto.html" class="bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-bold px-8 py-4 rounded-xl text-center transition shadow-sm">
-            Solicitar asesoría técnica
-          </a>
-        </div>
-
-        <!-- CONTADORES DINÁMICOS ANIMADOS POR JAVASCRIPT -->
-        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-slate-200">
-          <div>
-            <div id="counter-convocatorias" class="text-3xl font-extrabold text-slate-900 font-mono-num">0</div>
-            <div class="text-xs text-slate-500 font-semibold mt-1">Convocatorias evaluadas</div>
-          </div>
-          <div>
-            <div id="counter-precision" class="text-3xl font-extrabold text-blue-700 font-mono-num">0%</div>
-            <div class="text-xs text-slate-500 font-semibold mt-1">Precisión de idoneidad</div>
-          </div>
-          <div>
-            <div id="counter-tiempo" class="text-3xl font-extrabold text-emerald-600 font-mono-num">0 min</div>
-            <div class="text-xs text-slate-500 font-semibold mt-1">Síntesis de bases técnicas</div>
+      <div class="relative max-w-7xl mx-auto px-6 z-10 w-full">
+        <div class="max-w-2xl">
+          <span class="inline-block px-3 py-1 rounded bg-blue-600 text-white text-xs font-bold uppercase tracking-wider mb-4">
+            Plataforma B2G en el Perú
+          </span>
+          <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+            Inteligencia Estratégica en Compras Públicas para el Perú
+          </h1>
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+            Filtramos las convocatorias del SEACE, detectamos las oportunidades con mayor compatibilidad para tu empresa y sintetizamos expedientes técnicos complejos.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="como-funciona.html" class="bg-blue-700 hover:bg-blue-800 text-white font-bold px-7 py-3.5 rounded-xl transition shadow-lg">
+              Conocer cómo funciona
+            </a>
+            <a href="contacto.html" class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition">
+              Solicitar demostración
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- FOTOGRAFÍA CORPORATIVA DE ALTA CALIDAD -->
-      <div class="lg:col-span-5">
-        <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
-          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80" alt="Consultores y empresarios analizando proyectos" class="w-full h-80 object-cover">
-          <div class="p-6 bg-white">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">Servicio Especializado</span>
-              <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2 py-0.5 rounded-full border border-emerald-200">Vigente 2026</span>
+    <!-- SLIDE 2 -->
+    <div id="slide-1" class="carousel-slide absolute inset-0 opacity-0 pointer-events-none flex items-center">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1920&q=80" alt="Supervisión analítica de licitaciones públicas" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      
+      <div class="relative max-w-7xl mx-auto px-6 z-10 w-full">
+        <div class="max-w-2xl">
+          <span class="inline-block px-3 py-1 rounded bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider mb-4">
+            Análisis de Convocatorias en Tiempo Real
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+            Monitoreo y Alertas del SEACE Adaptadas a tu Sector
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+            Evita perder licitaciones por plazos vencidos. Te alertamos de concursos viables en bienes, servicios y consultorías según tu especialidad en el RNP.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="sectores.html" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-3.5 rounded-xl transition shadow-lg">
+              Ver sectores atendidos
+            </a>
+            <a href="contacto.html" class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition">
+              Contactar asesor
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div id="slide-2" class="carousel-slide absolute inset-0 opacity-0 pointer-events-none flex items-center">
+      <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1920&q=80" alt="Firma de contratos comerciales y licitaciones" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent"></div>
+      
+      <div class="relative max-w-7xl mx-auto px-6 z-10 w-full">
+        <div class="max-w-2xl">
+          <span class="inline-block px-3 py-1 rounded bg-purple-600 text-white text-xs font-bold uppercase tracking-wider mb-4">
+            Gestión y Resultados
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+            Postula con Certeza y Reduce el Riesgo de Descalificación
+          </h2>
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+            Checklists de requisitos obligatorios y resúmenes ejecutivos de penalidades y factores de evaluación para una postulación sólida.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="planes.html" class="bg-purple-600 hover:bg-purple-700 text-white font-bold px-7 py-3.5 rounded-xl transition shadow-lg">
+              Conocer planes y suscripciones
+            </a>
+            <a href="contacto.html" class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition">
+              Iniciar piloto
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROLES FLECHAS DEL CARRUSEL -->
+    <button onclick="cambiarSlide(-1)" class="absolute left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900/60 hover:bg-slate-900 text-white flex items-center justify-center text-xl backdrop-blur transition border border-white/20">
+      &#10094;
+    </button>
+    <button onclick="cambiarSlide(1)" class="absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-slate-900/60 hover:bg-slate-900 text-white flex items-center justify-center text-xl backdrop-blur transition border border-white/20">
+      &#10095;
+    </button>
+
+    <!-- PUNTOS INDICADORES DEL CARRUSEL -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <button onclick="irASlide(0)" id="dot-0" class="w-8 h-2 rounded-full bg-blue-500 transition-all"></button>
+      <button onclick="irASlide(1)" id="dot-1" class="w-2.5 h-2 rounded-full bg-white/50 transition-all"></button>
+      <button onclick="irASlide(2)" id="dot-2" class="w-2.5 h-2 rounded-full bg-white/50 transition-all"></button>
+    </div>
+
+  </section>
+
+  <!-- SECCIÓN DE ACCESOS RÁPIDOS MULTIPÁGINA (ESTILO PORTAL CORPORATIVO) -->
+  <section class="py-16 px-6 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- TARJETA 1 -->
+        <a href="como-funciona.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-400 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-blue-700 group-hover:text-white transition">
+              ⚙️
             </div>
-            <h3 class="text-base font-bold text-slate-900 leading-snug">
-              Acompañamiento tecnológico para proveedores de bienes, servicios y consultorías
-            </h3>
-            <p class="text-xs text-slate-500 mt-2">
-              Optimizamos los procesos de contratación pública para que las pequeñas y medianas empresas compitan con respaldo informativo.
+            <h3 class="text-base font-bold text-slate-900 mb-2">Cómo funciona</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              El paso a paso del filtrado inteligente, desde tu RNP hasta la postulación final.
             </p>
           </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MOTOR DINÁMICO DE BÚSQUEDA INTERACTIVO (JAVASCRIPT EN VIVO) -->
-  <section id="radar-en-vivo" class="py-20 px-6 bg-white border-b border-slate-200">
-    <div class="max-w-6xl mx-auto">
-      
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
-          Simulador Funcional
-        </span>
-        <h2 class="text-3xl font-extrabold text-slate-950 mt-3 mb-3">
-          Prueba el radar de licitaciones en tiempo real
-        </h2>
-        <p class="text-sm text-slate-600">
-          Escribe una palabra clave o haz clic en los filtros para ver cómo el sistema analiza y categoriza las oportunidades al instante.
-        </p>
-      </div>
-
-      <!-- BARRA DE BÚSQUEDA Y BOTONES DE FILTRO DINÁMICOS -->
-      <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm mb-8">
-        <div class="flex flex-col md:flex-row gap-4 mb-5">
-          <div class="relative flex-1">
-            <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-              🔍
-            </span>
-            <input type="text" id="liveSearchInput" onkeyup="filtrarLicitaciones()" placeholder="Buscar por palabra clave (ej. laptop, mantenimiento, limpieza, lima)..." class="w-full pl-11 pr-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white text-sm">
-          </div>
-          <button onclick="dispararToast('Alertas configuradas en tiempo real para tu rubro')" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-6 py-3 rounded-xl transition flex items-center justify-center gap-2">
-            <span>🔔 Activar Alertas</span>
-          </button>
-        </div>
-
-        <!-- FILTROS POR CATEGORÍA -->
-        <div class="flex flex-wrap items-center gap-2 text-xs font-semibold">
-          <span class="text-slate-500 mr-2">Filtrar por rubro:</span>
-          <button onclick="setCategoriaFiltro('todos')" id="btn-cat-todos" class="px-3.5 py-1.5 rounded-lg bg-blue-700 text-white transition">Todos</button>
-          <button onclick="setCategoriaFiltro('bienes')" id="btn-cat-bienes" class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 transition">Bienes (TI / Equipos)</button>
-          <button onclick="setCategoriaFiltro('servicios')" id="btn-cat-servicios" class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 transition">Servicios Generales</button>
-          <button onclick="setCategoriaFiltro('consultoria')" id="btn-cat-consultoria" class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 transition">Consultorías</button>
-        </div>
-      </div>
-
-      <!-- LISTA DINÁMICA DE CONVOCATORIAS -->
-      <div id="contenedorLicitaciones" class="space-y-4">
-        <!-- RENDERIZADO POR JAVASCRIPT -->
-      </div>
-      
-      <div id="mensajeSinResultados" class="hidden text-center py-12 text-slate-500 text-sm">
-        No se encontraron convocatorias que coincidan con tu búsqueda. Intenta con otro término.
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MODAL INTERACTIVO DE DETALLES (SE ABRE CON JAVASCRIPT) -->
-  <div id="detalleModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-2xl w-full p-8 shadow-2xl border border-slate-200 relative transform transition-all">
-      <button onclick="cerrarModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-2xl font-bold">
-        &times;
-      </button>
-
-      <div class="flex items-center gap-2 mb-3">
-        <span id="modalCodigo" class="text-xs font-mono font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded border border-blue-200"></span>
-        <span id="modalCompatibilidad" class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-full"></span>
-      </div>
-
-      <h3 id="modalTitulo" class="text-xl font-bold text-slate-900 mb-2 leading-snug"></h3>
-      <p id="modalEntidad" class="text-xs text-slate-500 mb-6"></p>
-
-      <div class="space-y-4 text-xs text-slate-700 bg-slate-50 p-5 rounded-2xl border border-slate-200 mb-6">
-        <div><strong>• Monto estimado:</strong> <span id="modalMonto" class="font-bold text-slate-900"></span></div>
-        <div><strong>• Plazo de entrega/ejecución:</strong> <span id="modalPlazo"></span></div>
-        <div><strong>• Requisitos de experiencia previa:</strong> <span id="modalExperiencia"></span></div>
-        <div><strong>• Documentos obligatorios del pliego:</strong> <span id="modalDocumentos"></span></div>
-      </div>
-
-      <div class="flex justify-end gap-3">
-        <button onclick="cerrarModal()" class="px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-100 transition">
-          Cerrar
-        </button>
-        <a href="contacto.html" class="bg-blue-700 hover:bg-blue-800 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-md">
-          Postular con acompañamiento
+          <span class="text-xs font-bold text-blue-700 mt-4 block">Explorar proceso →</span>
         </a>
+
+        <!-- TARJETA 2 -->
+        <a href="sectores.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-400 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition">
+              🏢
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Sectores atendidos</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Bienes, servicios generales, obras menores y consultoría especializada.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-emerald-700 mt-4 block">Ver categorías →</span>
+        </a>
+
+        <!-- TARJETA 3 -->
+        <a href="planes.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-400 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition">
+              📋
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Planes y servicios</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Modalidades de suscripción y acompañamiento para micro y pequeñas empresas.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-purple-700 mt-4 block">Consultar planes →</span>
+        </a>
+
+        <!-- TARJETA 4 -->
+        <a href="contacto.html" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-400 transition group flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-xl mb-4 group-hover:bg-amber-600 group-hover:text-white transition">
+              ✉️
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Contacto directo</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Comunícate con nuestro equipo para agendar una demostración personalizada.
+            </p>
+          </div>
+          <span class="text-xs font-bold text-amber-700 mt-4 block">Contactar ahora →</span>
+        </a>
+
       </div>
+
     </div>
-  </div>
+  </section>
 
-  <!-- SECCIÓN DE VALOR REAL (SIN TECNICISMOS) -->
-  <section class="py-20 px-6 bg-slate-50 border-b border-slate-200">
+  <!-- CIFRAS CLAVE DEL MERCADO DE COMPRAS PÚBLICAS -->
+  <section class="py-20 px-6 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100 px-3 py-1 rounded-full">Beneficios Concretos</span>
-        <h2 class="text-3xl font-extrabold text-slate-950 mt-3 mb-4">¿Qué resuelve GMC Licitaciones para tu empresa?</h2>
-        <p class="text-slate-600 text-sm">Convertimos un proceso burocrático de días en decisiones comerciales ágiles.</p>
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-slate-900 mb-4">El mercado de compras estatales en cifras</h2>
+        <p class="text-slate-600 text-sm">El Estado peruano es el mayor comprador del país. Te ayudamos a participar con orden y respaldo técnico.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center font-bold text-xl mb-6">🎯</div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Filtro selectivo</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Te alertamos solo de concursos donde cumples el 100% de requisitos técnicos y financieros.</p>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="text-4xl font-extrabold text-blue-700 mb-2">+S/ 50,000 M</div>
+          <h3 class="text-sm font-bold text-slate-900 mb-2">Presupuesto anual adjudicado</h3>
+          <p class="text-xs text-slate-500">Monto total que las entidades del Estado destinan anualmente a la compra de bienes y servicios.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center font-bold text-xl mb-6">📄</div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Resúmenes de 80 páginas</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Extraemos penalidades, plazos de entrega y declaraciones juradas en minutos sin enredos legales.</p>
+
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="text-4xl font-extrabold text-emerald-700 mb-2">+50,000</div>
+          <h3 class="text-sm font-bold text-slate-900 mb-2">Convocatorias públicas anuales</h3>
+          <p class="text-xs text-slate-500">Procesos publicados entre licitaciones, concursos públicos y adjudicaciones simplificadas.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-xl mb-6">✅</div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Cero descalificaciones</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">Te entregamos un checklist obligatorio para que tu propuesta no sea rechazada por errores formales.</p>
+
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="text-4xl font-extrabold text-purple-700 mb-2">Ley 32069</div>
+          <h3 class="text-sm font-bold text-slate-900 mb-2">Nuevo marco legal vigente</h3>
+          <p class="text-xs text-slate-500">Normativa orientada al valor por dinero y la priorización de contratos divididos en lotes para MYPEs.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FORMULARIO DE CONTACTO SEGURO -->
-  <section class="py-20 px-6 bg-white">
-    <div class="max-w-4xl mx-auto bg-slate-50 rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-sm">
-      <div class="text-center max-w-xl mx-auto mb-10">
-        <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Solicita una demostración para tu empresa</h2>
-        <p class="text-xs text-slate-600">Configuramos el radar con tu RUC para mostrarte las convocatorias viables de tu sector.</p>
-      </div>
-
-      <form onsubmit="validarFormularioContacto(event)" class="space-y-5">
-        <div class="grid sm:grid-cols-2 gap-5">
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Representante Comercial</label>
-            <input type="text" id="formNombre" required placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-700 text-sm bg-white">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">RUC de la Empresa (11 dígitos)</label>
-            <input type="text" id="formRuc" required maxlength="11" placeholder="Ej. 20601234567" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-700 text-sm bg-white font-mono">
-            <span id="rucInvalidoMsg" class="text-xs text-red-600 hidden mt-1 block">El RUC debe tener 11 dígitos y comenzar con 10 o 20.</span>
-          </div>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-5">
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Correo Corporativo</label>
-            <input type="email" id="formEmail" required placeholder="contacto@tuempresa.pe" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-700 text-sm bg-white">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Teléfono / WhatsApp</label>
-            <input type="tel" id="formTel" required placeholder="+51 987 654 321" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-700 text-sm bg-white">
-          </div>
-        </div>
-
-        <button type="submit" class="w-full bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-700/20 transition text-sm">
-          Solicitar Demostración Guiada
-        </button>
-      </form>
+  <!-- BANNER DE LLAMADO A LA ACCIÓN (SIN FORMULARIO LARGO EN HOME) -->
+  <section class="py-20 px-6 bg-slate-900 text-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+        ¿Listo para llevar tu empresa al siguiente nivel en el SEACE?
+      </h2>
+      <p class="text-slate-300 text-base max-w-xl mx-auto mb-8 leading-relaxed">
+        Conversemos sobre el perfil de tu empresa y configuremos una demostración con convocatorias reales de tu rubro.
+      </p>
+      <a href="contacto.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">
+        <span>Ir a la página de contacto</span>
+        <span>→</span>
+      </a>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-slate-950 text-slate-300 py-16 px-6 border-t border-slate-800 text-xs">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+  <footer class="bg-white border-t border-slate-200 py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500">
       <div>
-        <div class="flex items-center gap-2 mb-2">
-          <div class="h-7 w-7 rounded bg-blue-700 flex items-center justify-center font-bold text-white text-xs">G</div>
-          <span class="text-base font-bold text-white">GMC Licitaciones</span>
-        </div>
-        <p class="text-slate-500">Lima, Perú • © 2026. Plataforma de Inteligencia en Contrataciones del Estado.</p>
+        <span class="font-bold text-slate-900 text-sm">GMC Licitaciones</span> • Lima, Perú.
+        <p class="mt-1">Plataforma de Inteligencia en Contrataciones del Estado • Todos los derechos reservados © 2026.</p>
       </div>
-      <div class="flex gap-6 font-semibold text-slate-400">
-        <a href="como-funciona.html" class="hover:text-white transition">Cómo funciona</a>
-        <a href="sectores.html" class="hover:text-white transition">Sectores</a>
-        <a href="planes.html" class="hover:text-white transition">Planes</a>
-        <a href="contacto.html" class="hover:text-white transition">Contacto</a>
+      <div class="flex gap-6 font-semibold">
+        <a href="como-funciona.html" class="hover:text-blue-700 transition">Cómo funciona</a>
+        <a href="sectores.html" class="hover:text-blue-700 transition">Sectores</a>
+        <a href="planes.html" class="hover:text-blue-700 transition">Planes</a>
+        <a href="contacto.html" class="hover:text-blue-700 transition">Contacto</a>
       </div>
     </div>
   </footer>
 
-  <!-- JAVASCRIPT DINÁMICO E INTERACTIVO -->
+  <!-- JAVASCRIPT DEL CARRUSEL DINÁMICO AUTOMÁTICO -->
   <script>
-    // BASE DE DATOS LOCAL DINÁMICA DE CONVOCATORIAS
-    const licitaciones = [
-      {
-        id: 1,
-        codigo: "AS-SM-12-2026-MML",
-        categoria: "bienes",
-        titulo: "Adquisición de Laptops y Equipos de Comunicación para Sedes Descentralizadas",
-        entidad: "Municipalidad Metropolitana de Lima",
-        monto: "S/ 285,400.00",
-        plazo: "45 días calendario computados desde la orden de compra",
-        compatibilidad: "96%",
-        experiencia: "S/ 300,000 en ventas similares en los últimos 3 años",
-        documentos: "Anexo 1 (Declaración de postor), Carta de garantía de fábrica por 2 años, Catálogo técnico oficial del fabricante."
-      },
-      {
-        id: 2,
-        codigo: "CP-SM-04-2026-MINSA",
-        categoria: "servicios",
-        titulo: "Servicio de Mantenimiento Preventivo y Soporte de Infraestructura Tecnológica",
-        entidad: "Ministerio de Salud",
-        monto: "S/ 142,000.00",
-        plazo: "Servicio por 12 meses con entregables mensuales",
-        compatibilidad: "91%",
-        experiencia: "S/ 180,000 acumulados en mantenimiento de redes",
-        documentos: "Certificación de personal técnico especialista, Plan de contingencias de atención en 4 horas."
-      },
-      {
-        id: 3,
-        codigo: "AS-SM-08-2026-GORE-LIMA",
-        categoria: "servicios",
-        titulo: "Servicio Integral de Limpieza y Desinfección de Oficinas Administrativas",
-        entidad: "Gobierno Regional de Lima",
-        monto: "S/ 89,000.00",
-        plazo: "6 meses calendario",
-        compatibilidad: "94%",
-        experiencia: "S/ 100,000 en limpieza institucional acreditada",
-        documentos: "Constancia de RNP vigente en Servicios, Fichas de seguridad de productos químicos y seguros SCTR del personal."
-      },
-      {
-        id: 4,
-        codigo: "CI-SM-02-2026-MIDIS",
-        categoria: "consultoria",
-        titulo: "Consultoría para el Diseño y Auditoría de Procesos Digitales Institucionales",
-        entidad: "Ministerio de Desarrollo e Inclusión Social",
-        monto: "S/ 115,000.00",
-        plazo: "90 días calendario",
-        compatibilidad: "88%",
-        experiencia: "3 consultorías similares culminadas a satisfacción",
-        documentos: "Título profesional y colegiatura de jefe de proyecto, Metodología de trabajo y cronograma Gantt detallado."
-      }
-    ];
+    let slideActual = 0;
+    const totalSlides = 3;
+    let intervaloCarousel;
 
-    let categoriaActual = "todos";
-
-    // RENDERIZADO DINÁMICO DE CONVOCATORIAS
-    function renderizarLicitaciones(items) {
-      const container = document.getElementById("contenedorLicitaciones");
-      const sinResultados = document.getElementById("mensajeSinResultados");
-      container.innerHTML = "";
-
-      if (items.length === 0) {
-        sinResultados.classList.remove("hidden");
-        return;
-      }
-      sinResultados.classList.add("hidden");
-
-      items.forEach(lic => {
-        const itemHtml = `
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-400 hover:shadow-md transition flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div class="space-y-1 max-w-2xl">
-              <div class="flex items-center gap-2">
-                <span class="text-xs font-mono font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">${lic.codigo}</span>
-                <span class="text-xs text-slate-500">• ${lic.entidad}</span>
-              </div>
-              <h3 class="text-base font-bold text-slate-900 leading-snug">${lic.titulo}</h3>
-              <p class="text-xs text-slate-500">Valor Referencial: <strong class="text-slate-800">${lic.monto}</strong></p>
-            </div>
-            <div class="flex md:flex-col items-center md:items-end justify-between w-full md:w-auto gap-3">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
-                ${lic.compatibilidad} de compatibilidad
-              </span>
-              <button onclick="abrirModal(${lic.id})" class="text-xs font-bold text-blue-700 hover:text-blue-800 hover:underline">
-                Ver requisitos y bases →
-              </button>
-            </div>
-          </div>
-        `;
-        container.innerHTML += itemHtml;
-      });
-    }
-
-    // FILTRO EN TIEMPO REAL
-    function filtrarLicitaciones() {
-      const texto = document.getElementById("liveSearchInput").value.toLowerCase().trim();
-      const filtrados = licitaciones.filter(lic => {
-        const coincideCat = (categoriaActual === "todos") || (lic.categoria === categoriaActual);
-        const coincideTexto = lic.titulo.toLowerCase().includes(texto) ||
-                              lic.entidad.toLowerCase().includes(texto) ||
-                              lic.codigo.toLowerCase().includes(texto);
-        return coincideCat && coincideTexto;
-      });
-      renderizarLicitaciones(filtrados);
-    }
-
-    function setCategoriaFiltro(cat) {
-      categoriaActual = cat;
-      const categorias = ["todos", "bienes", "servicios", "consultoria"];
-      categorias.forEach(c => {
-        const btn = document.getElementById(`btn-cat-${c}`);
-        if (c === cat) {
-          btn.className = "px-3.5 py-1.5 rounded-lg bg-blue-700 text-white transition";
+    function mostrarSlide(index) {
+      for (let i = 0; i < totalSlides; i++) {
+        const slide = document.getElementById(`slide-${i}`);
+        const dot = document.getElementById(`dot-${i}`);
+        if (i === index) {
+          slide.classList.remove('opacity-0', 'pointer-events-none');
+          slide.classList.add('opacity-100');
+          dot.classList.remove('w-2.5', 'bg-white/50');
+          dot.classList.add('w-8', 'bg-blue-500');
         } else {
-          btn.className = "px-3.5 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-700 hover:bg-slate-100 transition";
+          slide.classList.remove('opacity-100');
+          slide.classList.add('opacity-0', 'pointer-events-none');
+          dot.classList.remove('w-8', 'bg-blue-500');
+          dot.classList.add('w-2.5', 'bg-white/50');
         }
-      });
-      filtrarLicitaciones();
-    }
-
-    // MODAL DE DETALLES
-    function abrirModal(id) {
-      const lic = licitaciones.find(l => l.id === id);
-      if (!lic) return;
-      document.getElementById("modalCodigo").innerText = lic.codigo;
-      document.getElementById("modalCompatibilidad").innerText = `${lic.compatibilidad} compatibilidad`;
-      document.getElementById("modalTitulo").innerText = lic.titulo;
-      document.getElementById("modalEntidad").innerText = lic.entidad;
-      document.getElementById("modalMonto").innerText = lic.monto;
-      document.getElementById("modalPlazo").innerText = lic.plazo;
-      document.getElementById("modalExperiencia").innerText = lic.experiencia;
-      document.getElementById("modalDocumentos").innerText = lic.documentos;
-      document.getElementById("detalleModal").classList.remove("hidden");
-    }
-
-    function cerrarModal() {
-      document.getElementById("detalleModal").classList.add("hidden");
-    }
-
-    // TOAST NOTIFICATION
-    function dispararToast(msg) {
-      const toast = document.getElementById("toastNotification");
-      document.getElementById("toastMessage").innerText = msg;
-      toast.classList.remove("translate-x-96", "opacity-0");
-      setTimeout(() => {
-        toast.classList.add("translate-x-96", "opacity-0");
-      }, 3500);
-    }
-
-    // ANIMACIÓN DE CONTADORES NUMÉRICOS
-    function animarContador(id, fin, duracion, sufijo = "") {
-      let inicio = 0;
-      const paso = Math.ceil(fin / (duracion / 16));
-      const elemento = document.getElementById(id);
-      const timer = setInterval(() => {
-        inicio += paso;
-        if (inicio >= fin) {
-          elemento.innerText = (fin >= 1000 ? `+${fin.toLocaleString()}` : fin) + sufijo;
-          clearInterval(timer);
-        } else {
-          elemento.innerText = (inicio >= 1000 ? `+${inicio.toLocaleString()}` : inicio) + sufijo;
-        }
-      }, 16);
-    }
-
-    // VALIDACIÓN ESTRICTA DE RUC EN EL FORMULARIO
-    function validarFormularioContacto(e) {
-      e.preventDefault();
-      const ruc = document.getElementById("formRuc").value.trim();
-      const rucError = document.getElementById("rucInvalidoMsg");
-      
-      const esValido = /^(10|20)\d{9}$/.test(ruc);
-      if (!esValido) {
-        rucError.classList.remove("hidden");
-        return false;
       }
-      rucError.classList.add("hidden");
-
-      dispararToast("Solicitud registrada con éxito. Nos comunicaremos contigo.");
-      e.target.reset();
-      return true;
+      slideActual = index;
     }
 
-    // INICIALIZACIÓN
+    function cambiarSlide(direccion) {
+      reiniciarTimer();
+      let nuevoIndex = slideActual + direccion;
+      if (nuevoIndex >= totalSlides) nuevoIndex = 0;
+      if (nuevoIndex < 0) nuevoIndex = totalSlides - 1;
+      mostrarSlide(nuevoIndex);
+    }
+
+    function irASlide(index) {
+      reiniciarTimer();
+      mostrarSlide(index);
+    }
+
+    function reiniciarTimer() {
+      clearInterval(intervaloCarousel);
+      intervaloCarousel = setInterval(() => {
+        cambiarSlide(1);
+      }, 5000);
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
-      renderizarLicitaciones(licitaciones);
-      animarContador("counter-convocatorias", 52400, 1200);
-      setTimeout(() => { document.getElementById("counter-precision").innerText = "94.8%"; }, 800);
-      setTimeout(() => { document.getElementById("counter-tiempo").innerText = "< 3 min"; }, 800);
+      reiniciarTimer();
     });
   </script>
 </body>
