@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- CABECERAS DE SEGURIDAD -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  
+  <title>Sectores Atendidos | GMC Licitaciones</title>
+  <meta name="description" content="Conoce las principales industrias y rubros comerciales del RNP donde GMC Licitaciones optimiza las postulaciones ante el Estado.">
+
+  <!-- TAILWIND CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- TIPOGRAFÍA FORMAL -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono-num { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-700 selection:text-white">
+
+  <!-- BARRA SUPERIOR INSTITUCIONAL -->
+  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-6 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2.5">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Alineado a las normativas de la nueva <strong>Ley de Contrataciones del Estado N.° 32069</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span>🇵🇪 Lima, Perú</span>
+        <span>•</span>
+        <a href="contacto.html" class="hover:text-white transition">Atención a Proveedores</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-11 w-11 rounded-xl bg-blue-700 flex items-center justify-center font-black text-white text-xl shadow-md shadow-blue-700/20">
+          G
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-slate-950 block leading-tight">GMC <span class="text-blue-700">Licitaciones</span></span>
+          <span class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider block">Inteligencia Estratégica en Compras Públicas</span>
+        </div>
+      </a>
+
+      <!-- MENÚ MULTIPÁGINA -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="index.html" class="hover:text-blue-700 transition">Inicio</a>
+        <a href="como-funciona.html" class="hover:text-blue-700 transition">Cómo funciona</a>
+        <a href="sectores.html" class="text-blue-700 border-b-2 border-blue-700 pb-1">Sectores</a>
+        <a href="planes.html" class="hover:text-blue-700 transition">Planes</a>
+        <a href="contacto.html" class="hover:text-blue-700 transition">Contacto</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contacto.html" class="bg-blue-700 hover:bg-blue-800 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition shadow-md shadow-blue-700/20">
+          Solicitar Demostración
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CABECERA DE LA PÁGINA -->
+  <section class="relative bg-slate-900 text-white py-16 md:py-24 px-6 border-b border-slate-800 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-25">
+      <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1920&q=80" alt="Sectores comerciales y compras estatales" class="w-full h-full object-cover">
+    </div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+      <span class="inline-block px-3 py-1 rounded bg-blue-600 text-white text-xs font-bold uppercase tracking-wider mb-4">
+        Especialización por Rubro Comercial
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight mb-6">
+        Sectores con mayor volumen de contratación estatal
+      </h1>
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+        Adaptamos los filtros analíticos a las características operativas y normativas de cada industria en el Registro Nacional de Proveedores (RNP).
+      </p>
+    </div>
+  </section>
+
+  <!-- SELECTOR INTERACTIVO POR SECTOR (JAVASCRIPT EN VIVO) -->
+  <section class="py-20 px-6 bg-white border-b border-slate-200">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3.5 py-1 rounded-full border border-blue-200">
+          Ficha de Sector
+        </span>
+        <h2 class="text-3xl font-extrabold text-slate-950 mt-3 mb-3">
+          Explora los parámetros clave de tu industria
+        </h2>
+        <p class="text-sm text-slate-600">
+          Selecciona tu sector para ver los tipos de procesos más convocados, montos de adjudicación y requisitos frecuentes.
+        </p>
+      </div>
+
+      <!-- BOTONES DE NAVEGACIÓN DE SECTOR -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+        <button onclick="cambiarSector('ti')" id="btn-sec-ti" class="p-4 rounded-2xl border-2 border-blue-700 bg-blue-50 text-left transition">
+          <div class="text-xs font-bold text-blue-700 uppercase mb-1">Sector 01</div>
+          <div class="text-sm font-extrabold text-slate-900 leading-snug">Tecnología y Cómputo</div>
+        </button>
+        <button onclick="cambiarSector('servicios')" id="btn-sec-servicios" class="p-4 rounded-2xl border border-slate-200 bg-white hover:bg-slate-50 text-left transition">
+          <div class="text-xs font-bold text-slate-400 uppercase mb-1">Sector 02</div>
+          <div class="text-sm font-extrabold text-slate-900 leading-snug">Servicios Generales</div>
+        </button>
+        <button onclick="cambiarSector('suministros')" id="btn-sec-suministros" class="p-4 rounded-2xl border border-slate-200 bg-white hover:bg-slate-50 text-left transition">
+          <div class="text-xs font-bold text-slate-400 uppercase mb-1">Sector 03</div>
+          <div class="text-sm font-extrabold text-slate-900 leading-snug">Ferretería y Suministros</div>
+        </button>
+        <button onclick="cambiarSector('consultoria')" id="btn-sec-consultoria" class="p-4 rounded-2xl border border-slate-200 bg-white hover:bg-slate-50 text-left transition">
+          <div class="text-xs font-bold text-slate-400 uppercase mb-1">Sector 04</div>
+          <div class="text-sm font-extrabold text-slate-900 leading-snug">Consultorías de Obra / TI</div>
+        </button>
+      </div>
+
+      <!-- DETALLE DEL SECTOR EN TIEMPO REAL -->
+      <div class="bg-slate-50 rounded-3xl border border-slate-200 p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center">
+        
+        <div class="md:col-span-7 space-y-5">
+          <div class="flex items-center gap-2">
+            <span id="sectorTag" class="text-xs font-mono font-bold text-blue-700 bg-blue-100/80 px-3 py-1 rounded-md">BIENES INFORMÁTICOS • RNP BIENES</span>
+            <span id="sectorRango" class="text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">S/ 80,000 a S/ 650,000</span>
+          </div>
+
+          <h3 id="sectorTitulo" class="text-2xl md:text-3xl font-bold text-slate-950 leading-snug">
+            Equipamiento de cómputo, servidores, licencias y redes
+          </h3>
+
+          <p id="sectorDescripcion" class="text-sm text-slate-600 leading-relaxed">
+            Las entidades públicas renuevan constantemente su parque tecnológico. La plataforma detecta convocatorias por catálogo electrónico, acuerdos marco y adjudicaciones simplificadas, verificando requisitos de homologación y cartas de garantía del fabricante.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 bg-white rounded-xl border border-slate-200">
+              <span class="text-slate-400 block mb-1">Compradores habituales:</span>
+              <strong id="sectorCompradores" class="text-slate-800">Ministerios, Gobiernos Regionales, ESSALUD y Municipalidades.</strong>
+            </div>
+            <div class="p-4 bg-white rounded-xl border border-slate-200">
+              <span class="text-slate-400 block mb-1">Requisito más exigente:</span>
+              <strong id="sectorExigencia" class="text-slate-800">Carta de garantía local y plazo estricto de entrega.</strong>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="contacto.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:text-blue-900 transition">
+              <span>Configurar alertas para este rubro</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-5">
+          <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 h-72">
+            <img id="sectorImagen" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Sector tecnológico" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BANNER FINAL DIRECTO A CONTACTO -->
+  <section class="py-20 px-6 bg-slate-900 text-white text-center">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4">
+        ¿Tu empresa pertenece a alguno de estos rubros?
+      </h2>
+      <p class="text-slate-400 text-base max-w-xl mx-auto mb-8 leading-relaxed">
+        Conversemos sobre tu especialidad y comencemos a rastrear las licitaciones públicas disponibles para tu negocio.
+      </p>
+      <a href="contacto.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">
+        <span>Ir a la página de contacto</span>
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-slate-500">
+      <div>
+        <span class="font-bold text-slate-900 text-sm">GMC Licitaciones</span> • Lima, Perú.
+        <p class="mt-1">Plataforma de Inteligencia en Contrataciones del Estado © 2026.</p>
+      </div>
+      <div class="flex gap-6 font-semibold">
+        <a href="index.html" class="hover:text-blue-700 transition">Inicio</a>
+        <a href="como-funciona.html" class="hover:text-blue-700 transition">Cómo funciona</a>
+        <a href="sectores.html" class="text-blue-700">Sectores</a>
+        <a href="planes.html" class="hover:text-blue-700 transition">Planes</a>
+        <a href="contacto.html" class="hover:text-blue-700 transition">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT DINÁMICO DE SECTORES -->
+  <script>
+    const datosSectores = {
+      ti: {
+        tag: "BIENES INFORMÁTICOS • RNP BIENES",
+        rango: "S/ 80,000 a S/ 650,000",
+        titulo: "Equipamiento de cómputo, servidores, licencias y redes",
+        desc: "Las entidades públicas renuevan constantemente su parque tecnológico. La plataforma detecta convocatorias por catálogo electrónico, acuerdos marco y adjudicaciones simplificadas, verificando requisitos de homologación y cartas de garantía del fabricante.",
+        compradores: "Ministerios, Gobiernos Regionales, ESSALUD y Municipalidades.",
+        exigencia: "Carta de garantía local y plazo estricto de entrega.",
+        imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+      },
+      servicios: {
+        tag: "SERVICIOS GENERALES • RNP SERVICIOS",
+        rango: "S/ 50,000 a S/ 450,000",
+        titulo: "Mantenimiento, limpieza institucional, vigilancia y transporte",
+        desc: "El rubro más contratado por el Estado en términos de recurrencia mensual. El radar prioriza contratos con lotes reservados para MYPEs bajo la Ley N.° 32069, analizando seguros SCTR y experiencia de personal operativo.",
+        compradores: "Redes de Salud, Hospitales, Universidades y Municipalidades.",
+        exigencia: "Plan de seguridad en el trabajo y pólizas SCTR vigentes.",
+        imagen: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+      },
+      suministros: {
+        tag: "SUMINISTROS Y MATERIALES • RNP BIENES",
+        rango: "S/ 40,000 a S/ 380,000",
+        titulo: "Ferretería, materiales de construcción e insumos institucionales",
+        desc: "Convocatorias para provisión continua de materiales para mantenimiento de vías, centros comunitarios y oficinas públicas. Verificación automática de fichas técnicas y plazos de entrega inmediata.",
+        compradores: "Empresas públicas de saneamiento (EPS), Gobiernos Locales.",
+        exigencia: "Ficha técnica aprobada y muestras de producto a conformidad.",
+        imagen: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80"
+      },
+      consultoria: {
+        tag: "CONSULTORÍA ESPECIALIZADA • RNP CONSULTORÍA",
+        rango: "S/ 70,000 a S/ 500,000",
+        titulo: "Estudios técnicos, supervisión y desarrollo de software",
+        desc: "Procesos basados en calidad y propuesta técnica. Nuestro sistema resume el perfil exigido para los consultores clave, años de colegiatura requeridos y metodología de entregables.",
+        compradores: "Ministerios rectores, Organismos Reguladores, Gobiernos Regionales.",
+        exigencia: "Acreditación documental de consultorías culminadas sin penalidad.",
+        imagen: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80"
+      }
+    };
+
+    function cambiarSector(clave) {
+      ["ti", "servicios", "suministros", "consultoria"].forEach(s => {
+        const btn = document.getElementById(`btn-sec-${s}`);
+        if (s === clave) {
+          btn.className = "p-4 rounded-2xl border-2 border-blue-700 bg-blue-50 text-left transition";
+          btn.querySelector(".text-xs").className = "text-xs font-bold text-blue-700 uppercase mb-1";
+        } else {
+          btn.className = "p-4 rounded-2xl border border-slate-200 bg-white hover:bg-slate-50 text-left transition";
+          btn.querySelector(".text-xs").className = "text-xs font-bold text-slate-400 uppercase mb-1";
+        }
+      });
+
+      const sec = datosSectores[clave];
+      document.getElementById("sectorTag").innerText = sec.tag;
+      document.getElementById("sectorRango").innerText = sec.rango;
+      document.getElementById("sectorTitulo").innerText = sec.titulo;
+      document.getElementById("sectorDescripcion").innerText = sec.desc;
+      document.getElementById("sectorCompradores").innerText = sec.compradores;
+      document.getElementById("sectorExigencia").innerText = sec.exigencia;
+      document.getElementById("sectorImagen").src = sec.imagen;
+    }
+  </script>
+</body>
+</html>
